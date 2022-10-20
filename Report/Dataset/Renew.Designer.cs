@@ -315,6 +315,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnticket_no;
             
+            private global::System.Data.DataColumn columnexpired_date;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public RenewDSDataTable() {
@@ -494,6 +496,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn expired_dateColumn {
+                get {
+                    return this.columnexpired_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -547,7 +557,8 @@ namespace Report.Dataset {
                         string row_number, 
                         string waive, 
                         string contract_id, 
-                        string ticket_no) {
+                        string ticket_no, 
+                        string expired_date) {
                 RenewDSRow rowRenewDSRow = ((RenewDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         payment_flag,
@@ -567,7 +578,8 @@ namespace Report.Dataset {
                         row_number,
                         waive,
                         contract_id,
-                        ticket_no};
+                        ticket_no,
+                        expired_date};
                 rowRenewDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRenewDSRow);
                 return rowRenewDSRow;
@@ -608,6 +620,7 @@ namespace Report.Dataset {
                 this.columnwaive = base.Columns["waive"];
                 this.columncontract_id = base.Columns["contract_id"];
                 this.columnticket_no = base.Columns["ticket_no"];
+                this.columnexpired_date = base.Columns["expired_date"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -649,6 +662,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columncontract_id);
                 this.columnticket_no = new global::System.Data.DataColumn("ticket_no", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnticket_no);
+                this.columnexpired_date = new global::System.Data.DataColumn("expired_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexpired_date);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1079,6 +1094,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string expired_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableRenewDS.expired_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'expired_date\' in table \'RenewDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRenewDS.expired_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Ispayment_flagNull() {
                 return this.IsNull(this.tableRenewDS.payment_flagColumn);
             }
@@ -1291,6 +1322,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setticket_noNull() {
                 this[this.tableRenewDS.ticket_noColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isexpired_dateNull() {
+                return this.IsNull(this.tableRenewDS.expired_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setexpired_dateNull() {
+                this[this.tableRenewDS.expired_dateColumn] = global::System.Convert.DBNull;
             }
         }
         
