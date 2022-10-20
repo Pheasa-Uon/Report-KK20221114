@@ -89,10 +89,14 @@
           <DataField>ticket_no</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="expired_date">
+          <DataField>expired_date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Renew</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\Renew.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\All Document\Midas Pawn Shop\Report\KK report\Stable\Report\Dataset\Renew.xsd</rd:SchemaPath>
         <rd:TableName>RenewDS</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -980,14 +984,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="due_date">
+                        <Textbox Name="expired_date">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!due_date.Value</Value>
+                                  <Value>=Fields!expired_date.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>dd-MMM-yyyy</Format>
@@ -999,7 +1003,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>due_date</rd:DefaultName>
+                          <rd:DefaultName>expired_date</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
