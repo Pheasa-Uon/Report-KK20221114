@@ -301,6 +301,10 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnlob_type;
             
+            private global::System.Data.DataColumn columndisbursement_date;
+            
+            private global::System.Data.DataColumn columnexpired_date;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ContractOutstandingByDateDatasetDataTable() {
@@ -424,6 +428,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn disbursement_dateColumn {
+                get {
+                    return this.columndisbursement_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn expired_dateColumn {
+                get {
+                    return this.columnexpired_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +479,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ContractOutstandingByDateDatasetRow AddContractOutstandingByDateDatasetRow(string contract_no, string branch_id, string currency_id, string bfbal, string disburse, string principle_pay, string afbal, string customer_no, string customer_name, string lob_name, string lob_type) {
+            public ContractOutstandingByDateDatasetRow AddContractOutstandingByDateDatasetRow(string contract_no, string branch_id, string currency_id, string bfbal, string disburse, string principle_pay, string afbal, string customer_no, string customer_name, string lob_name, string lob_type, string disbursement_date, string expired_date) {
                 ContractOutstandingByDateDatasetRow rowContractOutstandingByDateDatasetRow = ((ContractOutstandingByDateDatasetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         contract_no,
@@ -472,7 +492,9 @@ namespace Report.Dataset {
                         customer_no,
                         customer_name,
                         lob_name,
-                        lob_type};
+                        lob_type,
+                        disbursement_date,
+                        expired_date};
                 rowContractOutstandingByDateDatasetRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowContractOutstandingByDateDatasetRow);
                 return rowContractOutstandingByDateDatasetRow;
@@ -506,6 +528,8 @@ namespace Report.Dataset {
                 this.columncustomer_name = base.Columns["customer_name"];
                 this.columnlob_name = base.Columns["lob_name"];
                 this.columnlob_type = base.Columns["lob_type"];
+                this.columndisbursement_date = base.Columns["disbursement_date"];
+                this.columnexpired_date = base.Columns["expired_date"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -533,6 +557,10 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnlob_name);
                 this.columnlob_type = new global::System.Data.DataColumn("lob_type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlob_type);
+                this.columndisbursement_date = new global::System.Data.DataColumn("disbursement_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndisbursement_date);
+                this.columnexpired_date = new global::System.Data.DataColumn("expired_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexpired_date);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -862,6 +890,40 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string disbursement_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractOutstandingByDateDataset.disbursement_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'disbursement_date\' in table \'ContractOutstandingByDateDatas" +
+                                "et\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableContractOutstandingByDateDataset.disbursement_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string expired_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractOutstandingByDateDataset.expired_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'expired_date\' in table \'ContractOutstandingByDateDataset\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableContractOutstandingByDateDataset.expired_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscontract_noNull() {
                 return this.IsNull(this.tableContractOutstandingByDateDataset.contract_noColumn);
             }
@@ -990,6 +1052,30 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setlob_typeNull() {
                 this[this.tableContractOutstandingByDateDataset.lob_typeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isdisbursement_dateNull() {
+                return this.IsNull(this.tableContractOutstandingByDateDataset.disbursement_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setdisbursement_dateNull() {
+                this[this.tableContractOutstandingByDateDataset.disbursement_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isexpired_dateNull() {
+                return this.IsNull(this.tableContractOutstandingByDateDataset.expired_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setexpired_dateNull() {
+                this[this.tableContractOutstandingByDateDataset.expired_dateColumn] = global::System.Convert.DBNull;
             }
         }
         
