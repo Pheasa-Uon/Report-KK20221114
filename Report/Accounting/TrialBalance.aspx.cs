@@ -57,6 +57,10 @@ namespace Report.Accounting
                 return;
             }
 
+            var eoyCondition = " AND trx_name NOT LIKE '%EOY%'";
+
+            if (CheckEOY.Checked) eoyCondition = "";
+
             var sql = "";
             if (ddBranchName.SelectedItem.Value == "ALL")
             {
@@ -79,7 +83,7 @@ namespace Report.Accounting
                 "  (SELECT gl_id, " +
                 "  SUM(CASE WHEN balance_side = 1 THEN amount ELSE 0 END) AS debit_amount, " +
                 "  SUM(CASE WHEN balance_side = 2 THEN amount ELSE 0 END) AS credit_amount " +
-                " FROM acc_transaction WHERE DATE(sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND b_status = 1 AND trx_status = 1 " +
+                " FROM acc_transaction WHERE DATE(sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND b_status = 1 AND trx_status = 1 " + eoyCondition +
                 " GROUP BY gl_id " +
                 " ) AS new_amt ON new_amt.gl_id = acc.id " +
                 " LEFT JOIN " +
@@ -111,7 +115,7 @@ namespace Report.Accounting
                 "  (SELECT gl_id, " +
                 "  SUM(CASE WHEN balance_side = 1 THEN amount ELSE 0 END) AS debit_amount, " +
                 "  SUM(CASE WHEN balance_side = 2 THEN amount ELSE 0 END) AS credit_amount " +
-                " FROM acc_transaction WHERE DATE(sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND b_status = 1 AND trx_status = 1 " +
+                " FROM acc_transaction WHERE DATE(sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND b_status = 1 AND trx_status = 1 " + eoyCondition +
                 " GROUP BY gl_id " +
                 " ) AS new_amt ON new_amt.gl_id = acc.id " +
                 " LEFT JOIN " +
