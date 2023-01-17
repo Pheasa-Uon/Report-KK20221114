@@ -44,6 +44,10 @@
                     <asp:DropDownList ID="ddCurrency" runat="server" AutoPostBack="true" CssClass="form-control input-sm">
                     </asp:DropDownList>
                 </div>
+                 <div class="col-sm-2 form-group">
+                    <label>Include EOY:</label>
+                    <asp:CheckBox ID="CheckEOY" runat="server" Width="100%" TextAlign="Left" />
+                </div>
                 <div class="form-group ml16">
                     <div>
                         <label>&nbsp;</label>
