@@ -57,7 +57,7 @@ namespace Report.Accounting
                 return;
             }
 
-            var eoyCondition = " AND trx_name NOT LIKE '%EOY%'";
+            var eoyCondition = " AND (trx_name NOT LIKE '%EOY%' or trx_name is null) ";
 
             if (CheckEOY.Checked) eoyCondition = "";
 
