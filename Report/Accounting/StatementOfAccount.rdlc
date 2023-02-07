@@ -7,7 +7,6 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>598d2f3b-4a2e-46ef-b695-2da6f4b0d99f</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -86,10 +85,14 @@
           <DataField>description</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="ounstanding">
+          <DataField>ounstanding</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>StatementOfAccount</rd:DataSetName>
-        <rd:SchemaPath>D:\002-MIDAS Financial System\010-Reports\001-KK Power Report\002-KK Power report_20230207\Report\Dataset\StatementOfAccount.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\002-MIDAS Financial System\010-Reports\001-KK Power Report\003-KK Power report_2023020701\Report\Dataset\StatementOfAccount.xsd</rd:SchemaPath>
         <rd:TableName>StatementOfAccount</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -122,7 +125,7 @@
             </Paragraphs>
             <rd:DefaultName>CompanyName</rd:DefaultName>
             <Height>0.25in</Height>
-            <Width>6.34167in</Width>
+            <Width>6.18125in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -155,7 +158,7 @@
             <rd:DefaultName>SystemDate</rd:DefaultName>
             <Top>0.26389in</Top>
             <Height>0.25in</Height>
-            <Width>6.34167in</Width>
+            <Width>6.18125in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -189,7 +192,7 @@
             <rd:DefaultName>SystemDate</rd:DefaultName>
             <Top>0.52778in</Top>
             <Height>0.25in</Height>
-            <Width>6.34167in</Width>
+            <Width>6.18125in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -205,28 +208,28 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.85846in</Width>
+                  <Width>0.83841in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.34167in</Width>
+                  <Width>0.32162in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.82143in</Width>
+                  <Width>0.80138in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.30622in</Width>
+                  <Width>1.28617in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.97995in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.07222in</Width>
+                  <Width>1.05217in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.97995in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.97995in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1503,7 +1506,7 @@ Ref Amount</Value>
             <DataSetName>SOA</DataSetName>
             <Top>3.41096in</Top>
             <Height>1.19643in</Height>
-            <Width>7.4in</Width>
+            <Width>7.23958in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -1532,7 +1535,7 @@ Ref Amount</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Left>6.34167in</Left>
+            <Left>6.18125in</Left>
             <Height>0.25in</Height>
             <Width>1.05833in</Width>
             <ZIndex>4</ZIndex>
@@ -1570,7 +1573,7 @@ Ref Amount</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.26389in</Top>
-            <Left>6.34167in</Left>
+            <Left>6.18125in</Left>
             <Height>0.25in</Height>
             <Width>1.05833in</Width>
             <ZIndex>5</ZIndex>
@@ -1608,7 +1611,7 @@ Ref Amount</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.52778in</Top>
-            <Left>6.34167in</Left>
+            <Left>6.18125in</Left>
             <Height>0.25in</Height>
             <Width>1.05833in</Width>
             <ZIndex>6</ZIndex>
@@ -1646,9 +1649,9 @@ Ref Amount</Value>
               </Paragraph>
             </Paragraphs>
             <Top>0.79167in</Top>
-            <Left>7.02156in</Left>
+            <Left>6.75003in</Left>
             <Height>0.25in</Height>
-            <Width>0.37844in</Width>
+            <Width>0.48955in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -1681,9 +1684,9 @@ Ref Amount</Value>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
             <Top>0.79167in</Top>
-            <Left>6.33902in</Left>
+            <Left>6.1786in</Left>
             <Height>0.25in</Height>
-            <Width>0.68254in</Width>
+            <Width>0.55754in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -1718,7 +1721,7 @@ Ref Amount</Value>
             <rd:DefaultName>Textbox15</rd:DefaultName>
             <Top>1.08333in</Top>
             <Height>0.25in</Height>
-            <Width>6.34167in</Width>
+            <Width>6.18125in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -1759,7 +1762,7 @@ Ref Amount</Value>
             <rd:DefaultName>Textbox15</rd:DefaultName>
             <Top>1.34722in</Top>
             <Height>0.25in</Height>
-            <Width>6.34167in</Width>
+            <Width>6.18125in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -2339,11 +2342,81 @@ Ref Amount</Value>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Your balance as of </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!SystemDate.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>4.67683in</Top>
+            <Height>0.25in</Height>
+            <Width>3.725in</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>is </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!ounstanding.Value, "SOA")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>4.67683in</Top>
+            <Left>3.73889in</Left>
+            <Height>0.25in</Height>
+            <Width>3.50069in</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>9.27783in</Height>
+        <Height>6.65283in</Height>
         <Style />
       </Body>
-      <Width>7.4in</Width>
+      <Width>7.25in</Width>
       <Page>
         <PageHeight>11.69in</PageHeight>
         <PageWidth>8.27in</PageWidth>

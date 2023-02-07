@@ -313,6 +313,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columndescription;
             
+            private global::System.Data.DataColumn columnounstanding;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public StatementOfAccountDataTable() {
@@ -484,6 +486,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ounstandingColumn {
+                get {
+                    return this.columnounstanding;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -536,7 +546,8 @@ namespace Report.Dataset {
                         string Debit, 
                         string Credit, 
                         string balance, 
-                        string description) {
+                        string description, 
+                        string ounstanding) {
                 StatementOfAccountRow rowStatementOfAccountRow = ((StatementOfAccountRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         contract_no,
@@ -555,7 +566,8 @@ namespace Report.Dataset {
                         Debit,
                         Credit,
                         balance,
-                        description};
+                        description,
+                        ounstanding};
                 rowStatementOfAccountRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStatementOfAccountRow);
                 return rowStatementOfAccountRow;
@@ -595,6 +607,7 @@ namespace Report.Dataset {
                 this.columnCredit = base.Columns["Credit"];
                 this.columnbalance = base.Columns["balance"];
                 this.columndescription = base.Columns["description"];
+                this.columnounstanding = base.Columns["ounstanding"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -634,6 +647,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnbalance);
                 this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescription);
+                this.columnounstanding = new global::System.Data.DataColumn("ounstanding", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnounstanding);
                 this.ExtendedProperties.Add("Generator_TablePropName", "_StatementOfAccount");
                 this.ExtendedProperties.Add("Generator_UserTableName", "StatementOfAccount");
             }
@@ -1051,6 +1066,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ounstanding {
+                get {
+                    try {
+                        return ((string)(this[this.tableStatementOfAccount.ounstandingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ounstanding\' in table \'StatementOfAccount\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStatementOfAccount.ounstandingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscontract_noNull() {
                 return this.IsNull(this.tableStatementOfAccount.contract_noColumn);
             }
@@ -1251,6 +1282,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetdescriptionNull() {
                 this[this.tableStatementOfAccount.descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsounstandingNull() {
+                return this.IsNull(this.tableStatementOfAccount.ounstandingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetounstandingNull() {
+                this[this.tableStatementOfAccount.ounstandingColumn] = global::System.Convert.DBNull;
             }
         }
         
