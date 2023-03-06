@@ -87,8 +87,9 @@ namespace Report.Operation
                             "    CL.vh_plate_no, CL.vh_cylinder, CL.vh_frame, CL.vh_engine_no, CRT.cert_name,  " +
                             "    CL.pr_issue_date, CL.pr_square_side, CL.pr_north_by, CL.pr_south_by, CL.pr_west_by, CL.pr_east_by,  " +
                             "    CL.jr_weight, CL.jr_quality , CL.remark,CL.el_model,CL.vh_mark,CL.vh_type,CL.vh_color,br.branch_code,  " +
-                            "    case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership  " +
+                            "    case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership,dpt.account_no  " +
                         "     FROM contract C  " +
+                        "      left join deposit_account dpt on dpt.id = c.deposit_account_id " +
                         "     LEFT JOIN(SELECT contract_id, SUM(fee_amount) AS fee FROM contract_fee WHERE b_status= 1 GROUP BY contract_id) CF ON C.id = CF.contract_id  " +
                         "     LEFT JOIN customer CUS ON C.customer_id = CUS.id  " +
                         "     LEFT JOIN currency CUR ON C.currency_id = CUR.id  " +
@@ -118,8 +119,9 @@ namespace Report.Operation
                             "    CL.vh_plate_no, CL.vh_cylinder, CL.vh_frame, CL.vh_engine_no, CRT.cert_name,  " +
                             "    CL.pr_issue_date, CL.pr_square_side, CL.pr_north_by, CL.pr_south_by, CL.pr_west_by, CL.pr_east_by,  " +
                             "    CL.jr_weight, CL.jr_quality , CL.remark,CL.el_model,CL.vh_mark,CL.vh_type,CL.vh_color,br.branch_code,  " +
-                            "    case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership  " +
+                            "    case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership,dpt.account_no  " +
                         "     FROM contract C  " +
+                        "     left join deposit_account dpt on dpt.id = c.deposit_account_id " +
                         "     LEFT JOIN(SELECT contract_id, SUM(fee_amount) AS fee FROM contract_fee WHERE b_status= 1 GROUP BY contract_id) CF ON C.id = CF.contract_id  " +
                         "     LEFT JOIN customer CUS ON C.customer_id = CUS.id  " +
                         "     LEFT JOIN currency CUR ON C.currency_id = CUR.id  " +
@@ -154,7 +156,7 @@ namespace Report.Operation
             if (ddBranchName.SelectedItem.Value == "ALL")
             {
                 sql += " UNION " +
-                   "SELECT C.id,P.payment_date,CUS.customer_name,ST.ticket_no,ST.due_date,0,  " +
+                   "SELECT C.id,P.payment_date,CUS.customer_name,ST.ticket_no,ST.due_date,0,dpt.account_no,  " +
                         "        CUR.currency,CUR.currency_code,SI.`name` pawn_officer,PD.lob_name,P.principle_pay,P.interest_pay,  " +
                         "        ROUND(IFNULL(OI.total_other_income, 0), 2) AS other_income_amt,  " +
                         "        ST.serial_number,C.contract_type, C.`come_through`, C.dv_ref,  " +
@@ -168,6 +170,7 @@ namespace Report.Operation
                     "       FROM payment P   " +
                     "       INNER JOIN payment_total PTT ON P.payment_total_id = PTT.id  " +
                     "       INNER JOIN contract C ON PTT.`contract_id`= C.id    " +
+                    "       left join deposit_account dpt on dpt.id = c.deposit_account_id " +
                     "       LEFT JOIN schedule_ticket ST ON ST.id = PTT.schedule_ticket_id    " +
                     "       LEFT JOIN customer CUS ON C.customer_id = CUS.id   " +
                     "       LEFT JOIN currency CUR ON C.currency_id = CUR.id   " +
@@ -194,7 +197,7 @@ namespace Report.Operation
             else
             {
                 sql += " UNION " +
-                   "SELECT C.id,P.payment_date,CUS.customer_name,ST.ticket_no,ST.due_date,0,  " +
+                   "SELECT C.id,P.payment_date,CUS.customer_name,ST.ticket_no,ST.due_date,0,dpt.account_no,  " +
                         "        CUR.currency,CUR.currency_code,SI.`name` pawn_officer,PD.lob_name,P.principle_pay,P.interest_pay,  " +
                         "        ROUND(IFNULL(OI.total_other_income, 0), 2) AS other_income_amt,  " +
                         "        ST.serial_number,C.contract_type, C.`come_through`, C.dv_ref,  " +
@@ -208,6 +211,7 @@ namespace Report.Operation
                     "       FROM payment P   " +
                     "       INNER JOIN payment_total PTT ON P.payment_total_id = PTT.id  " +
                     "       INNER JOIN contract C ON PTT.`contract_id`= C.id    " +
+                    "       left join deposit_account dpt on dpt.id = c.deposit_account_id " +
                     "       LEFT JOIN schedule_ticket ST ON ST.id = PTT.schedule_ticket_id    " +
                     "       LEFT JOIN customer CUS ON C.customer_id = CUS.id   " +
                     "       LEFT JOIN currency CUR ON C.currency_id = CUR.id   " +

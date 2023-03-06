@@ -379,7 +379,7 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnis_ownership;
             
-            private global::System.Data.DataColumn columnDataColumn9;
+            private global::System.Data.DataColumn columnaccount_no;
             
             private global::System.Data.DataColumn columnDataColumn10;
             
@@ -820,9 +820,9 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DataColumn9Column {
+            public global::System.Data.DataColumn account_noColumn {
                 get {
-                    return this.columnDataColumn9;
+                    return this.columnaccount_no;
                 }
             }
             
@@ -930,7 +930,7 @@ namespace Report.Dataset {
                         string vh_color, 
                         string branch_code, 
                         string is_ownership, 
-                        string DataColumn9, 
+                        string account_no, 
                         string DataColumn10, 
                         string DataColumn11) {
                 NewGrantDSRow rowNewGrantDSRow = ((NewGrantDSRow)(this.NewRow()));
@@ -985,7 +985,7 @@ namespace Report.Dataset {
                         vh_color,
                         branch_code,
                         is_ownership,
-                        DataColumn9,
+                        account_no,
                         DataColumn10,
                         DataColumn11};
                 rowNewGrantDSRow.ItemArray = columnValuesArray;
@@ -1060,7 +1060,7 @@ namespace Report.Dataset {
                 this.columnvh_color = base.Columns["vh_color"];
                 this.columnbranch_code = base.Columns["branch_code"];
                 this.columnis_ownership = base.Columns["is_ownership"];
-                this.columnDataColumn9 = base.Columns["DataColumn9"];
+                this.columnaccount_no = base.Columns["account_no"];
                 this.columnDataColumn10 = base.Columns["DataColumn10"];
                 this.columnDataColumn11 = base.Columns["DataColumn11"];
             }
@@ -1168,8 +1168,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnbranch_code);
                 this.columnis_ownership = new global::System.Data.DataColumn("is_ownership", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnis_ownership);
-                this.columnDataColumn9 = new global::System.Data.DataColumn("DataColumn9", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDataColumn9);
+                this.columnaccount_no = new global::System.Data.DataColumn("account_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaccount_no);
                 this.columnDataColumn10 = new global::System.Data.DataColumn("DataColumn10", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDataColumn10);
                 this.columnDataColumn11 = new global::System.Data.DataColumn("DataColumn11", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2116,17 +2116,17 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string DataColumn9 {
+            public string account_no {
                 get {
                     try {
-                        return ((string)(this[this.tableNewGrantDS.DataColumn9Column]));
+                        return ((string)(this[this.tableNewGrantDS.account_noColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DataColumn9\' in table \'NewGrantDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'account_no\' in table \'NewGrantDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNewGrantDS.DataColumn9Column] = value;
+                    this[this.tableNewGrantDS.account_noColumn] = value;
                 }
             }
             
@@ -2764,14 +2764,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDataColumn9Null() {
-                return this.IsNull(this.tableNewGrantDS.DataColumn9Column);
+            public bool Isaccount_noNull() {
+                return this.IsNull(this.tableNewGrantDS.account_noColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDataColumn9Null() {
-                this[this.tableNewGrantDS.DataColumn9Column] = global::System.Convert.DBNull;
+            public void Setaccount_noNull() {
+                this[this.tableNewGrantDS.account_noColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
