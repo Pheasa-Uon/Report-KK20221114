@@ -87,7 +87,7 @@ namespace Report.Operation
                             "    CL.vh_plate_no, CL.vh_cylinder, CL.vh_frame, CL.vh_engine_no, CRT.cert_name,  " +
                             "    CL.pr_issue_date, CL.pr_square_side, CL.pr_north_by, CL.pr_south_by, CL.pr_west_by, CL.pr_east_by,  " +
                             "    CL.jr_weight, CL.jr_quality , CL.remark,CL.el_model,CL.vh_mark,CL.vh_type,CL.vh_color,br.branch_code,  " +
-                            "    case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership,dpt.account_no  " +
+                            "    case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership,dpt.account_no, c.contract_no  " +
                         "     FROM contract C  " +
                         "      left join deposit_account dpt on dpt.id = c.deposit_account_id " +
                         "     LEFT JOIN(SELECT contract_id, SUM(fee_amount) AS fee FROM contract_fee WHERE b_status= 1 GROUP BY contract_id) CF ON C.id = CF.contract_id  " +
@@ -119,7 +119,7 @@ namespace Report.Operation
                             "    CL.vh_plate_no, CL.vh_cylinder, CL.vh_frame, CL.vh_engine_no, CRT.cert_name,  " +
                             "    CL.pr_issue_date, CL.pr_square_side, CL.pr_north_by, CL.pr_south_by, CL.pr_west_by, CL.pr_east_by,  " +
                             "    CL.jr_weight, CL.jr_quality , CL.remark,CL.el_model,CL.vh_mark,CL.vh_type,CL.vh_color,br.branch_code,  " +
-                            "    case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership,dpt.account_no  " +
+                            "    case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership,dpt.account_no, c.contract_no   " +
                         "     FROM contract C  " +
                         "     left join deposit_account dpt on dpt.id = c.deposit_account_id " +
                         "     LEFT JOIN(SELECT contract_id, SUM(fee_amount) AS fee FROM contract_fee WHERE b_status= 1 GROUP BY contract_id) CF ON C.id = CF.contract_id  " +
@@ -166,7 +166,7 @@ namespace Report.Operation
                         "        CL.vh_plate_no, CL.vh_cylinder, CL.vh_frame, CL.vh_engine_no, CRT.cert_name,  " +
                         "        CL.pr_issue_date, CL.pr_square_side, CL.pr_north_by, CL.pr_south_by, CL.pr_west_by, CL.pr_east_by,  " +
                         "        CL.jr_weight, CL.jr_quality , CL.remark,CL.el_model,CL.vh_mark,CL.vh_type,CL.vh_color,br.branch_code, " +
-                        "		 case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership  " +
+                        "		 case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership , c.contract_no  " +
                     "       FROM payment P   " +
                     "       INNER JOIN payment_total PTT ON P.payment_total_id = PTT.id  " +
                     "       INNER JOIN contract C ON PTT.`contract_id`= C.id    " +
@@ -207,7 +207,7 @@ namespace Report.Operation
                         "        CL.vh_plate_no, CL.vh_cylinder, CL.vh_frame, CL.vh_engine_no, CRT.cert_name,  " +
                         "        CL.pr_issue_date, CL.pr_square_side, CL.pr_north_by, CL.pr_south_by, CL.pr_west_by, CL.pr_east_by,  " +
                         "        CL.jr_weight, CL.jr_quality , CL.remark,CL.el_model,CL.vh_mark,CL.vh_type,CL.vh_color,br.branch_code, " +
-                        "		 case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership  " +
+                        "		 case when CL.is_ownership = 1 then 'Yes' else 'No' end is_ownership , c.contract_no  " +
                     "       FROM payment P   " +
                     "       INNER JOIN payment_total PTT ON P.payment_total_id = PTT.id  " +
                     "       INNER JOIN contract C ON PTT.`contract_id`= C.id    " +
