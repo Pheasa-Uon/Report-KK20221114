@@ -221,8 +221,8 @@
           <DataField>account_no</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="DataColumn10">
-          <DataField>DataColumn10</DataField>
+        <Field Name="contract_no">
+          <DataField>contract_no</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="DataColumn11">
@@ -646,14 +646,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="account_no">
+                        <Textbox Name="contract_no">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!account_no.Value</Value>
+                                  <Value>=Fields!contract_no.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                   </Style>
@@ -664,7 +664,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>account_no</rd:DefaultName>
+                          <rd:DefaultName>contract_no</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -2676,7 +2676,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>Deposit Account</Value>
+                                <Value>Contract Account</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
                                   <FontWeight>Bold</FontWeight>

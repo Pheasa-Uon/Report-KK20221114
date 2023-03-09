@@ -673,6 +673,17 @@
     <Content Include="Dataset\SummaryReport.xss">
       <DependentUpon>SummaryReport.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\TellerTransactionListingDS.xsc">
+      <DependentUpon>TellerTransactionListingDS.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\TellerTransactionListingDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TellerTransactionListingDS.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\TellerTransactionListingDS.xss">
+      <DependentUpon>TellerTransactionListingDS.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\TrailBalance.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -787,6 +798,7 @@
     <Content Include="Operation\SummaryReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Operation\TellerTransactionListing.aspx" />
     <Content Include="Operation\TurnoverReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1227,6 +1239,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SummaryReport.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\TellerTransactionListingDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TellerTransactionListingDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\TrailBalance.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1358,6 +1375,13 @@
     </Compile>
     <Compile Include="Operation\ProductivityConsolidateByLOBOnDate.aspx.designer.cs">
       <DependentUpon>ProductivityConsolidateByLOBOnDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\TellerTransactionListing.aspx.cs">
+      <DependentUpon>TellerTransactionListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\TellerTransactionListing.aspx.designer.cs">
+      <DependentUpon>TellerTransactionListing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\AES.cs" />
     <Compile Include="Utils\ClsCrypto.cs" />
@@ -1562,6 +1586,9 @@
     <Content Include="Accounting\StatementOfAccount.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Operation\TellerTransactionListing.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
