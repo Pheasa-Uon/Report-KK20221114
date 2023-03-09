@@ -145,7 +145,7 @@ namespace Report.Operation
             }
             sql += " ) A " +
              " WHERE A.fee_collect > 0 " +
-             " ORDER BY or_ref, payment_date ";
+             " ORDER BY payment_date,ticket_no ";
             DataTable dt = db.getDataTable(sql);
             GenerateReport(dt);
         }
