@@ -684,6 +684,17 @@
     <Content Include="Dataset\TellerTransactionListingDS.xss">
       <DependentUpon>TellerTransactionListingDS.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\testing.xsc">
+      <DependentUpon>testing.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\testing.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testing.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\testing.xss">
+      <DependentUpon>testing.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\TrailBalance.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -799,6 +810,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Operation\TellerTransactionListing.aspx" />
+    <Content Include="Operation\testing.aspx" />
     <Content Include="Operation\TurnoverReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1244,6 +1256,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TellerTransactionListingDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\testing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testing.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\TrailBalance.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1382,6 +1399,13 @@
     </Compile>
     <Compile Include="Operation\TellerTransactionListing.aspx.designer.cs">
       <DependentUpon>TellerTransactionListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\testing.aspx.cs">
+      <DependentUpon>testing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\testing.aspx.designer.cs">
+      <DependentUpon>testing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\AES.cs" />
     <Compile Include="Utils\ClsCrypto.cs" />
@@ -1591,6 +1615,9 @@
     <Content Include="Operation\TellerTransactionListing.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Operation\Testing.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
