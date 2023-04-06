@@ -364,6 +364,12 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnticket_no;
             
+            private global::System.Data.DataColumn columnfirst_disburse_date;
+            
+            private global::System.Data.DataColumn columninterest_late;
+            
+            private global::System.Data.DataColumn columnnum_of_day;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public LateReportDSDataTable() {
@@ -599,6 +605,30 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn first_disburse_dateColumn {
+                get {
+                    return this.columnfirst_disburse_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interest_lateColumn {
+                get {
+                    return this.columninterest_late;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn num_of_dayColumn {
+                get {
+                    return this.columnnum_of_day;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -659,7 +689,10 @@ namespace Report.Dataset {
                         string ticket_type, 
                         string Serial_number, 
                         string contract_status, 
-                        string ticket_no) {
+                        string ticket_no, 
+                        string first_disburse_date, 
+                        string interest_late, 
+                        string num_of_day) {
                 LateReportDSRow rowLateReportDSRow = ((LateReportDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         customer_name,
@@ -686,7 +719,10 @@ namespace Report.Dataset {
                         ticket_type,
                         Serial_number,
                         contract_status,
-                        ticket_no};
+                        ticket_no,
+                        first_disburse_date,
+                        interest_late,
+                        num_of_day};
                 rowLateReportDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLateReportDSRow);
                 return rowLateReportDSRow;
@@ -734,6 +770,9 @@ namespace Report.Dataset {
                 this.columnSerial_number = base.Columns["Serial_number"];
                 this.columncontract_status = base.Columns["contract_status"];
                 this.columnticket_no = base.Columns["ticket_no"];
+                this.columnfirst_disburse_date = base.Columns["first_disburse_date"];
+                this.columninterest_late = base.Columns["interest_late"];
+                this.columnnum_of_day = base.Columns["num_of_day"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -789,6 +828,12 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columncontract_status);
                 this.columnticket_no = new global::System.Data.DataColumn("ticket_no", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnticket_no);
+                this.columnfirst_disburse_date = new global::System.Data.DataColumn("first_disburse_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfirst_disburse_date);
+                this.columninterest_late = new global::System.Data.DataColumn("interest_late", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest_late);
+                this.columnnum_of_day = new global::System.Data.DataColumn("num_of_day", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum_of_day);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1969,6 +2014,54 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string first_disburse_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableLateReportDS.first_disburse_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'first_disburse_date\' in table \'LateReportDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLateReportDS.first_disburse_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string interest_late {
+                get {
+                    try {
+                        return ((string)(this[this.tableLateReportDS.interest_lateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_late\' in table \'LateReportDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLateReportDS.interest_lateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string num_of_day {
+                get {
+                    try {
+                        return ((string)(this[this.tableLateReportDS.num_of_dayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'num_of_day\' in table \'LateReportDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLateReportDS.num_of_dayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscustomer_nameNull() {
                 return this.IsNull(this.tableLateReportDS.customer_nameColumn);
             }
@@ -2265,6 +2358,42 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setticket_noNull() {
                 this[this.tableLateReportDS.ticket_noColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isfirst_disburse_dateNull() {
+                return this.IsNull(this.tableLateReportDS.first_disburse_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setfirst_disburse_dateNull() {
+                this[this.tableLateReportDS.first_disburse_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinterest_lateNull() {
+                return this.IsNull(this.tableLateReportDS.interest_lateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinterest_lateNull() {
+                this[this.tableLateReportDS.interest_lateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isnum_of_dayNull() {
+                return this.IsNull(this.tableLateReportDS.num_of_dayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setnum_of_dayNull() {
+                this[this.tableLateReportDS.num_of_dayColumn] = global::System.Convert.DBNull;
             }
         }
         
