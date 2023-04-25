@@ -1673,8 +1673,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Operation\ContractExpectedRedeem.rdlc" />
-    <EmbeddedResource Include="Operation\OneYearRenewal.rdlc" />
+    <Content Include="Operation\ContractExpectedRedeem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\OneYearRenewal.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
