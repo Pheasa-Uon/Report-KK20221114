@@ -416,6 +416,17 @@
     <Content Include="Dataset\ContractOutstandingByDate.xsc">
       <DependentUpon>ContractOutstandingByDate.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\ContractandCollateralDetailsofCustomer.xsc">
+      <DependentUpon>ContractandCollateralDetailsofCustomer.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\ContractandCollateralDetailsofCustomer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractandCollateralDetailsofCustomer.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\ContractandCollateralDetailsofCustomer.xss">
+      <DependentUpon>ContractandCollateralDetailsofCustomer.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\ContractOutstandingByDate.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -574,6 +585,7 @@
     </Content>
     <Content Include="Operation\CashCollectionConsolidate.aspx" />
     <Content Include="Operation\CashCollectionOnDate.aspx" />
+    <Content Include="Operation\ContractandCollateralDetailsofCustomer.aspx" />
     <Content Include="Operation\Customer.aspx" />
     <Content Include="Operation\ContractOutstandingByDate.aspx" />
     <Content Include="Operation\PawnListDetail.rdlc">
@@ -1124,6 +1136,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CollectionSheet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\ContractandCollateralDetailsofCustomer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractandCollateralDetailsofCustomer.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\ContractOutstandingByDate.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1173,6 +1190,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IncomeStatementByMonth.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\IncomeStatementYTD.cs">
+      <DependentUpon>IncomeStatementYTD.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\IncomeStatementYTD.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1333,6 +1353,13 @@
     </Compile>
     <Compile Include="Operation\CashCollectionOnDate.aspx.designer.cs">
       <DependentUpon>CashCollectionOnDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ContractandCollateralDetailsofCustomer.aspx.cs">
+      <DependentUpon>ContractandCollateralDetailsofCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ContractandCollateralDetailsofCustomer.aspx.designer.cs">
+      <DependentUpon>ContractandCollateralDetailsofCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
@@ -1590,6 +1617,11 @@
   <ItemGroup>
     <Content Include="Operation\TellerTransactionListing.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Operation\ContractandCollateralDetailsofCustomer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <PropertyGroup>
