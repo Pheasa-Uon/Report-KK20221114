@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ContractExpectedRedeem" targetNamespace="http://tempuri.org/ContractExpectedRedeem.xsd" xmlns:mstns="http://tempuri.org/ContractExpectedRedeem.xsd" xmlns="http://tempuri.org/ContractExpectedRedeem.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ContractExpectedRedeem" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="ContractExpectedRedeem" msprop:Generator_DataSetName="ContractExpectedRedeem">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ContractExpectedRedeemDS" msprop:Generator_RowEvHandlerName="ContractExpectedRedeemDSRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractExpectedRedeemDSRowDeleted" msprop:Generator_RowDeletingName="ContractExpectedRedeemDSRowDeleting" msprop:Generator_RowEvArgName="ContractExpectedRedeemDSRowChangeEvent" msprop:Generator_TablePropName="ContractExpectedRedeemDS" msprop:Generator_RowChangedName="ContractExpectedRedeemDSRowChanged" msprop:Generator_RowChangingName="ContractExpectedRedeemDSRowChanging" msprop:Generator_TableClassName="ContractExpectedRedeemDSDataTable" msprop:Generator_RowClassName="ContractExpectedRedeemDSRow" msprop:Generator_TableVarName="tableContractExpectedRedeemDS" msprop:Generator_UserTableName="ContractExpectedRedeemDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="contract_no" msprop:Generator_ColumnPropNameInRow="contract_no" msprop:Generator_ColumnPropNameInTable="contract_noColumn" msprop:Generator_ColumnVarNameInTable="columncontract_no" msprop:Generator_UserColumnName="contract_no" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_UserColumnName="customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="lob_no" msprop:Generator_ColumnPropNameInRow="lob_no" msprop:Generator_ColumnPropNameInTable="lob_noColumn" msprop:Generator_ColumnVarNameInTable="columnlob_no" msprop:Generator_UserColumnName="lob_no" type="xs:string" minOccurs="0" />
+              <xs:element name="lob_name" msprop:Generator_ColumnPropNameInRow="lob_name" msprop:Generator_ColumnPropNameInTable="lob_nameColumn" msprop:Generator_ColumnVarNameInTable="columnlob_name" msprop:Generator_UserColumnName="lob_name" type="xs:string" minOccurs="0" />
+              <xs:element name="disbursement_date" msprop:Generator_ColumnPropNameInRow="disbursement_date" msprop:Generator_ColumnPropNameInTable="disbursement_dateColumn" msprop:Generator_ColumnVarNameInTable="columndisbursement_date" msprop:Generator_UserColumnName="disbursement_date" type="xs:string" minOccurs="0" />
+              <xs:element name="expired_date" msprop:Generator_ColumnPropNameInRow="expired_date" msprop:Generator_ColumnPropNameInTable="expired_dateColumn" msprop:Generator_ColumnVarNameInTable="columnexpired_date" msprop:Generator_UserColumnName="expired_date" type="xs:string" minOccurs="0" />
+              <xs:element name="market_price" msprop:Generator_ColumnPropNameInRow="market_price" msprop:Generator_ColumnPropNameInTable="market_priceColumn" msprop:Generator_ColumnVarNameInTable="columnmarket_price" msprop:Generator_UserColumnName="market_price" type="xs:string" minOccurs="0" />
+              <xs:element name="hot_price" msprop:Generator_ColumnPropNameInRow="hot_price" msprop:Generator_ColumnPropNameInTable="hot_priceColumn" msprop:Generator_ColumnVarNameInTable="columnhot_price" msprop:Generator_UserColumnName="hot_price" type="xs:string" minOccurs="0" />
+              <xs:element name="pawn_price" msprop:Generator_ColumnPropNameInRow="pawn_price" msprop:Generator_ColumnPropNameInTable="pawn_priceColumn" msprop:Generator_ColumnVarNameInTable="columnpawn_price" msprop:Generator_UserColumnName="pawn_price" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

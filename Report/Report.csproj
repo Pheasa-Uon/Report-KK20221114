@@ -427,6 +427,17 @@
     <Content Include="Dataset\ContractandCollateralDetailsofCustomer.xss">
       <DependentUpon>ContractandCollateralDetailsofCustomer.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\ContractExpectedRedeem.xsc">
+      <DependentUpon>ContractExpectedRedeem.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\ContractExpectedRedeem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractExpectedRedeem.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\ContractExpectedRedeem.xss">
+      <DependentUpon>ContractExpectedRedeem.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\ContractOutstandingByDate.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -586,6 +597,7 @@
     <Content Include="Operation\CashCollectionConsolidate.aspx" />
     <Content Include="Operation\CashCollectionOnDate.aspx" />
     <Content Include="Operation\ContractandCollateralDetailsofCustomer.aspx" />
+    <Content Include="Operation\ContractExpectedRedeem.aspx" />
     <Content Include="Operation\Customer.aspx" />
     <Content Include="Operation\ContractOutstandingByDate.aspx" />
     <Content Include="Operation\PawnListDetail.rdlc">
@@ -1141,6 +1153,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ContractandCollateralDetailsofCustomer.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\ContractExpectedRedeem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractExpectedRedeem.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\ContractOutstandingByDate.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1360,6 +1377,13 @@
     </Compile>
     <Compile Include="Operation\ContractandCollateralDetailsofCustomer.aspx.designer.cs">
       <DependentUpon>ContractandCollateralDetailsofCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ContractExpectedRedeem.aspx.cs">
+      <DependentUpon>ContractExpectedRedeem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ContractExpectedRedeem.aspx.designer.cs">
+      <DependentUpon>ContractExpectedRedeem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
@@ -1623,6 +1647,9 @@
     <Content Include="Operation\ContractandCollateralDetailsofCustomer.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Operation\ContractExpectedRedeem.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

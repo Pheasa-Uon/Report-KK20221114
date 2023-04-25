@@ -47,8 +47,8 @@ namespace Report.Operation
             {
                 sql = "SELECT PM.id,PM.payment_type,PM.payment_date,C.customer_name,ST.ticket_no,P.lob_name, " +
                 " CASE WHEN PT.payment_flag = 3 AND CON.redeem_type = 1 THEN " +
-                " CASE WHEN(PM.principle_pay - IFNULL((SELECT pawn_price_approved FROM contract WHERE parent_id_id = CON.id AND contract_status >= 4 AND contract_status != 5 LIMIT 1), 0)) > 0 THEN " +
-                " PM.principle_pay - IFNULL((SELECT pawn_price_approved FROM contract WHERE parent_id_id = CON.id AND contract_status >= 4 AND contract_status != 5 LIMIT 1), 0) ELSE 0 END " +
+                " (CASE WHEN(PM.principle_pay - IFNULL((SELECT pawn_price_approved FROM contract WHERE parent_id_id = CON.id AND contract_status >= 4 AND contract_status != 5 LIMIT 1), 0)) > 0 THEN " +
+                " PM.principle_pay - IFNULL((SELECT pawn_price_approved FROM contract WHERE parent_id_id = CON.id AND contract_status >= 4 AND contract_status != 5 LIMIT 1), 0) ELSE 0 END) " +
                 " ELSE PM.principle_pay END AS principle_pay, " +
                 " PM.interest_pay,PM.early_redeem_pay,PM.penalty_pay,ST.principle_due principle_less, " +
                 " CASE WHEN CON.product_type_id = 1 THEN STT.due_date ELSE ST.due_date END due_date,ST.serial_number,SI.`name` pawn_officer " +
@@ -74,8 +74,8 @@ namespace Report.Operation
             {
                 sql = "SELECT PM.id,PM.payment_type,PM.payment_date,C.customer_name,ST.ticket_no,P.lob_name, " +
                 " CASE WHEN PT.payment_flag = 3 AND CON.redeem_type = 1 THEN " +
-                " CASE WHEN(PM.principle_pay - IFNULL((SELECT pawn_price_approved FROM contract WHERE parent_id_id = CON.id AND contract_status >= 4 AND contract_status != 5 LIMIT 1), 0)) > 0 THEN " +
-                " PM.principle_pay - IFNULL((SELECT pawn_price_approved FROM contract WHERE parent_id_id = CON.id AND contract_status >= 4 AND contract_status != 5 LIMIT 1), 0) ELSE 0 END " +
+                " (CASE WHEN(PM.principle_pay - IFNULL((SELECT pawn_price_approved FROM contract WHERE parent_id_id = CON.id AND contract_status >= 4 AND contract_status != 5 LIMIT 1), 0)) > 0 THEN " +
+                " PM.principle_pay - IFNULL((SELECT pawn_price_approved FROM contract WHERE parent_id_id = CON.id AND contract_status >= 4 AND contract_status != 5 LIMIT 1), 0) ELSE 0 END) " +
                 " ELSE PM.principle_pay END AS principle_pay, " +
                 " PM.interest_pay,PM.early_redeem_pay,PM.penalty_pay,ST.principle_due principle_less, " +
                 " CASE WHEN CON.product_type_id = 1 THEN STT.due_date ELSE ST.due_date END due_date,ST.serial_number,SI.`name` pawn_officer " +
