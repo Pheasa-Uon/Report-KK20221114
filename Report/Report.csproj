@@ -586,6 +586,17 @@
     <Content Include="Dataset\NewGrant.xss">
       <DependentUpon>NewGrant.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\OneYearRenewal.xsc">
+      <DependentUpon>OneYearRenewal.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\OneYearRenewal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OneYearRenewal.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\OneYearRenewal.xss">
+      <DependentUpon>OneYearRenewal.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\PawnListDetail.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -600,6 +611,7 @@
     <Content Include="Operation\ContractExpectedRedeem.aspx" />
     <Content Include="Operation\Customer.aspx" />
     <Content Include="Operation\ContractOutstandingByDate.aspx" />
+    <Content Include="Operation\OneYearRenewal.aspx" />
     <Content Include="Operation\PawnListDetail.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1231,6 +1243,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NewGrant.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\OneYearRenewal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OneYearRenewal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\PawnListDetail.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1405,6 +1422,13 @@
     </Compile>
     <Compile Include="Operation\ContractOutstandingByDate.aspx.designer.cs">
       <DependentUpon>ContractOutstandingByDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\OneYearRenewal.aspx.cs">
+      <DependentUpon>OneYearRenewal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\OneYearRenewal.aspx.designer.cs">
+      <DependentUpon>OneYearRenewal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\PaymentDetail.aspx.cs">
       <DependentUpon>PaymentDetail.aspx</DependentUpon>
@@ -1650,6 +1674,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Operation\ContractExpectedRedeem.rdlc" />
+    <EmbeddedResource Include="Operation\OneYearRenewal.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

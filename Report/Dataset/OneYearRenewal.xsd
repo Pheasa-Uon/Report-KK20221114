@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OneYearRenewal" targetNamespace="http://tempuri.org/OneYearRenewal.xsd" xmlns:mstns="http://tempuri.org/OneYearRenewal.xsd" xmlns="http://tempuri.org/OneYearRenewal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OneYearRenewal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="OneYearRenewal" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OneYearRenewal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OneYearRenewalDS" msprop:Generator_RowClassName="OneYearRenewalDSRow" msprop:Generator_RowEvHandlerName="OneYearRenewalDSRowChangeEventHandler" msprop:Generator_RowDeletedName="OneYearRenewalDSRowDeleted" msprop:Generator_RowDeletingName="OneYearRenewalDSRowDeleting" msprop:Generator_RowEvArgName="OneYearRenewalDSRowChangeEvent" msprop:Generator_TablePropName="OneYearRenewalDS" msprop:Generator_RowChangedName="OneYearRenewalDSRowChanged" msprop:Generator_UserTableName="OneYearRenewalDS" msprop:Generator_RowChangingName="OneYearRenewalDSRowChanging" msprop:Generator_TableClassName="OneYearRenewalDSDataTable" msprop:Generator_TableVarName="tableOneYearRenewalDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Renew_on" msprop:Generator_UserColumnName="Renew_on" msprop:Generator_ColumnPropNameInTable="Renew_onColumn" msprop:Generator_ColumnPropNameInRow="Renew_on" msprop:Generator_ColumnVarNameInTable="columnRenew_on" type="xs:string" minOccurs="0" />
+              <xs:element name="Customer_Name" msprop:Generator_UserColumnName="Customer_Name" msprop:Generator_ColumnPropNameInTable="Customer_NameColumn" msprop:Generator_ColumnPropNameInRow="Customer_Name" msprop:Generator_ColumnVarNameInTable="columnCustomer_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_Loan" msprop:Generator_UserColumnName="ID_Loan" msprop:Generator_ColumnPropNameInTable="ID_LoanColumn" msprop:Generator_ColumnPropNameInRow="ID_Loan" msprop:Generator_ColumnVarNameInTable="columnID_Loan" type="xs:string" minOccurs="0" />
+              <xs:element name="Vignette" msprop:Generator_UserColumnName="Vignette" msprop:Generator_ColumnPropNameInTable="VignetteColumn" msprop:Generator_ColumnPropNameInRow="Vignette" msprop:Generator_ColumnVarNameInTable="columnVignette" type="xs:string" minOccurs="0" />
+              <xs:element name="Car_ID" msprop:Generator_UserColumnName="Car_ID" msprop:Generator_ColumnPropNameInTable="Car_IDColumn" msprop:Generator_ColumnPropNameInRow="Car_ID" msprop:Generator_ColumnVarNameInTable="columnCar_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Certificate" msprop:Generator_UserColumnName="Certificate" msprop:Generator_ColumnPropNameInTable="CertificateColumn" msprop:Generator_ColumnPropNameInRow="Certificate" msprop:Generator_ColumnVarNameInTable="columnCertificate" type="xs:string" minOccurs="0" />
+              <xs:element name="Sale_And_Purchase_Invoice" msprop:Generator_UserColumnName="Sale_And_Purchase_Invoice" msprop:Generator_ColumnPropNameInTable="Sale_And_Purchase_InvoiceColumn" msprop:Generator_ColumnPropNameInRow="Sale_And_Purchase_Invoice" msprop:Generator_ColumnVarNameInTable="columnSale_And_Purchase_Invoice" type="xs:string" minOccurs="0" />
+              <xs:element name="Engine_No" msprop:Generator_UserColumnName="Engine_No" msprop:Generator_ColumnPropNameInTable="Engine_NoColumn" msprop:Generator_ColumnPropNameInRow="Engine_No" msprop:Generator_ColumnVarNameInTable="columnEngine_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Chassie_No" msprop:Generator_UserColumnName="Chassie_No" msprop:Generator_ColumnPropNameInTable="Chassie_NoColumn" msprop:Generator_ColumnPropNameInRow="Chassie_No" msprop:Generator_ColumnVarNameInTable="columnChassie_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Brand" msprop:Generator_UserColumnName="Brand" msprop:Generator_ColumnPropNameInTable="BrandColumn" msprop:Generator_ColumnPropNameInRow="Brand" msprop:Generator_ColumnVarNameInTable="columnBrand" type="xs:string" minOccurs="0" />
+              <xs:element name="Color" msprop:Generator_UserColumnName="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnVarNameInTable="columnColor" type="xs:string" minOccurs="0" />
+              <xs:element name="Year" msprop:Generator_UserColumnName="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnVarNameInTable="columnYear" type="xs:string" minOccurs="0" />
+              <xs:element name="Size" msprop:Generator_UserColumnName="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnVarNameInTable="columnSize" type="xs:string" minOccurs="0" />
+              <xs:element name="Option" msprop:Generator_UserColumnName="Option" msprop:Generator_ColumnPropNameInTable="OptionColumn" msprop:Generator_ColumnPropNameInRow="Option" msprop:Generator_ColumnVarNameInTable="columnOption" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxPaper_Price" msprop:Generator_UserColumnName="TaxPaper_Price" msprop:Generator_ColumnPropNameInTable="TaxPaper_PriceColumn" msprop:Generator_ColumnPropNameInRow="TaxPaper_Price" msprop:Generator_ColumnVarNameInTable="columnTaxPaper_Price" type="xs:string" minOccurs="0" />
+              <xs:element name="Asset_Price" msprop:Generator_UserColumnName="Asset_Price" msprop:Generator_ColumnPropNameInTable="Asset_PriceColumn" msprop:Generator_ColumnPropNameInRow="Asset_Price" msprop:Generator_ColumnVarNameInTable="columnAsset_Price" type="xs:string" minOccurs="0" />
+              <xs:element name="Loan_Disbursed" msprop:Generator_UserColumnName="Loan_Disbursed" msprop:Generator_ColumnPropNameInTable="Loan_DisbursedColumn" msprop:Generator_ColumnPropNameInRow="Loan_Disbursed" msprop:Generator_ColumnVarNameInTable="columnLoan_Disbursed" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" type="xs:string" minOccurs="0" />
+              <xs:element name="Old_ID" msprop:Generator_UserColumnName="Old_ID" msprop:Generator_ColumnPropNameInTable="Old_IDColumn" msprop:Generator_ColumnPropNameInRow="Old_ID" msprop:Generator_ColumnVarNameInTable="columnOld_ID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
