@@ -17,42 +17,6 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="customer_no">
-          <DataField>customer_no</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="customer_name">
-          <DataField>customer_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="gender">
-          <DataField>gender</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="dob">
-          <DataField>dob</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="identify">
-          <DataField>identify</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="monthly_income">
-          <DataField>monthly_income</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="monthly_expense">
-          <DataField>monthly_expense</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="monthly_profit">
-          <DataField>monthly_profit</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="address">
-          <DataField>address</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="contract_no">
           <DataField>contract_no</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -182,6 +146,58 @@
         <rd:DataSetName>ContractandCollateralDetailsofCustomer</rd:DataSetName>
         <rd:SchemaPath>D:\002-MIDAS Financial System\010-Reports\001-KK Power Report\003-KK Power report_2023020701\Report\Dataset\ContractandCollateralDetailsofCustomer.xsd</rd:SchemaPath>
         <rd:TableName>DepositDS</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CustomerDS">
+      <Query>
+        <DataSourceName>ContractandCollateralDetailsofCustomer</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="customer_no">
+          <DataField>customer_no</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="customer_name">
+          <DataField>customer_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="gender">
+          <DataField>gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="dob">
+          <DataField>dob</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="identify">
+          <DataField>identify</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="monthly_income">
+          <DataField>monthly_income</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="monthly_expense">
+          <DataField>monthly_expense</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="monthly_profit">
+          <DataField>monthly_profit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="address">
+          <DataField>address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ContractandCollateralDetailsofCustomer</rd:DataSetName>
+        <rd:SchemaPath>D:\002-MIDAS Financial System\010-Reports\001-KK Power Report\003-KK Power report_2023020701\Report\Dataset\ContractandCollateralDetailsofCustomer.xsd</rd:SchemaPath>
+        <rd:TableName>CustomerDS</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -332,7 +348,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!customer_no.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!customer_no.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -365,7 +381,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!customer_name.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!customer_name.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1218,7 +1234,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!gender.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!gender.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1251,7 +1267,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!dob.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!dob.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1353,7 +1369,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!identify.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!identify.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1386,7 +1402,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!monthly_income.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!monthly_income.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1488,7 +1504,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!monthly_expense.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!monthly_expense.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1524,7 +1540,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!monthly_profit.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!monthly_profit.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1593,7 +1609,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!address.Value, "LoanDS")</Value>
+                    <Value>=First(Fields!address.Value, "CustomerDS")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>

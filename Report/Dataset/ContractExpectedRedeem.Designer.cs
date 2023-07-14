@@ -297,6 +297,18 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnpawn_price;
             
+            private global::System.Data.DataColumn columnoutstanding;
+            
+            private global::System.Data.DataColumn columninterest_overdue;
+            
+            private global::System.Data.DataColumn columninterest_accrual;
+            
+            private global::System.Data.DataColumn columnpenalty_amount;
+            
+            private global::System.Data.DataColumn columnearly_redeem_amount;
+            
+            private global::System.Data.DataColumn columntotal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ContractExpectedRedeemDSDataTable() {
@@ -404,6 +416,54 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn outstandingColumn {
+                get {
+                    return this.columnoutstanding;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interest_overdueColumn {
+                get {
+                    return this.columninterest_overdue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interest_accrualColumn {
+                get {
+                    return this.columninterest_accrual;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn penalty_amountColumn {
+                get {
+                    return this.columnpenalty_amount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn early_redeem_amountColumn {
+                get {
+                    return this.columnearly_redeem_amount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn totalColumn {
+                get {
+                    return this.columntotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +499,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ContractExpectedRedeemDSRow AddContractExpectedRedeemDSRow(string contract_no, string customer_name, string lob_no, string lob_name, string disbursement_date, string expired_date, string market_price, string hot_price, string pawn_price) {
+            public ContractExpectedRedeemDSRow AddContractExpectedRedeemDSRow(string contract_no, string customer_name, string lob_no, string lob_name, string disbursement_date, string expired_date, string market_price, string hot_price, string pawn_price, string outstanding, string interest_overdue, string interest_accrual, string penalty_amount, string early_redeem_amount, string total) {
                 ContractExpectedRedeemDSRow rowContractExpectedRedeemDSRow = ((ContractExpectedRedeemDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         contract_no,
@@ -450,7 +510,13 @@ namespace Report.Dataset {
                         expired_date,
                         market_price,
                         hot_price,
-                        pawn_price};
+                        pawn_price,
+                        outstanding,
+                        interest_overdue,
+                        interest_accrual,
+                        penalty_amount,
+                        early_redeem_amount,
+                        total};
                 rowContractExpectedRedeemDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowContractExpectedRedeemDSRow);
                 return rowContractExpectedRedeemDSRow;
@@ -482,6 +548,12 @@ namespace Report.Dataset {
                 this.columnmarket_price = base.Columns["market_price"];
                 this.columnhot_price = base.Columns["hot_price"];
                 this.columnpawn_price = base.Columns["pawn_price"];
+                this.columnoutstanding = base.Columns["outstanding"];
+                this.columninterest_overdue = base.Columns["interest_overdue"];
+                this.columninterest_accrual = base.Columns["interest_accrual"];
+                this.columnpenalty_amount = base.Columns["penalty_amount"];
+                this.columnearly_redeem_amount = base.Columns["early_redeem_amount"];
+                this.columntotal = base.Columns["total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,6 +577,18 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnhot_price);
                 this.columnpawn_price = new global::System.Data.DataColumn("pawn_price", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpawn_price);
+                this.columnoutstanding = new global::System.Data.DataColumn("outstanding", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoutstanding);
+                this.columninterest_overdue = new global::System.Data.DataColumn("interest_overdue", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest_overdue);
+                this.columninterest_accrual = new global::System.Data.DataColumn("interest_accrual", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest_accrual);
+                this.columnpenalty_amount = new global::System.Data.DataColumn("penalty_amount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpenalty_amount);
+                this.columnearly_redeem_amount = new global::System.Data.DataColumn("early_redeem_amount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnearly_redeem_amount);
+                this.columntotal = new global::System.Data.DataColumn("total", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -796,6 +880,107 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string outstanding {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractExpectedRedeemDS.outstandingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'outstanding\' in table \'ContractExpectedRedeemDS\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableContractExpectedRedeemDS.outstandingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string interest_overdue {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractExpectedRedeemDS.interest_overdueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_overdue\' in table \'ContractExpectedRedeemDS\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableContractExpectedRedeemDS.interest_overdueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string interest_accrual {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractExpectedRedeemDS.interest_accrualColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_accrual\' in table \'ContractExpectedRedeemDS\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableContractExpectedRedeemDS.interest_accrualColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string penalty_amount {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractExpectedRedeemDS.penalty_amountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'penalty_amount\' in table \'ContractExpectedRedeemDS\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableContractExpectedRedeemDS.penalty_amountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string early_redeem_amount {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractExpectedRedeemDS.early_redeem_amountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'early_redeem_amount\' in table \'ContractExpectedRedeemDS\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableContractExpectedRedeemDS.early_redeem_amountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string total {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractExpectedRedeemDS.totalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total\' in table \'ContractExpectedRedeemDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableContractExpectedRedeemDS.totalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscontract_noNull() {
                 return this.IsNull(this.tableContractExpectedRedeemDS.contract_noColumn);
             }
@@ -900,6 +1085,78 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setpawn_priceNull() {
                 this[this.tableContractExpectedRedeemDS.pawn_priceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsoutstandingNull() {
+                return this.IsNull(this.tableContractExpectedRedeemDS.outstandingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetoutstandingNull() {
+                this[this.tableContractExpectedRedeemDS.outstandingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinterest_overdueNull() {
+                return this.IsNull(this.tableContractExpectedRedeemDS.interest_overdueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinterest_overdueNull() {
+                this[this.tableContractExpectedRedeemDS.interest_overdueColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinterest_accrualNull() {
+                return this.IsNull(this.tableContractExpectedRedeemDS.interest_accrualColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinterest_accrualNull() {
+                this[this.tableContractExpectedRedeemDS.interest_accrualColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ispenalty_amountNull() {
+                return this.IsNull(this.tableContractExpectedRedeemDS.penalty_amountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setpenalty_amountNull() {
+                this[this.tableContractExpectedRedeemDS.penalty_amountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isearly_redeem_amountNull() {
+                return this.IsNull(this.tableContractExpectedRedeemDS.early_redeem_amountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setearly_redeem_amountNull() {
+                this[this.tableContractExpectedRedeemDS.early_redeem_amountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IstotalNull() {
+                return this.IsNull(this.tableContractExpectedRedeemDS.totalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SettotalNull() {
+                this[this.tableContractExpectedRedeemDS.totalColumn] = global::System.Convert.DBNull;
             }
         }
         

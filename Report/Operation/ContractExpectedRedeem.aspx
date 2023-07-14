@@ -8,17 +8,6 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-2 form-group">
-                    <label>From Date:</label>
-                    <asp:TextBox ID="dtpFromDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="dtpFromDate"
-                        ErrorMessage="* Please select date" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
-                    </asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="reqValidate" runat="server" ControlToValidate="dtpFromDate"
-                        ErrorMessage="* Wrong date formate" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic"
-                        ValidationExpression="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"></asp:RegularExpressionValidator>
-                    <span style="color: red"><%=dateFromError %></span>
-                </div>
-                <div class="col-sm-2 form-group">
                     <label>To Date:</label>
                     <asp:TextBox ID="dtpToDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="dtpToDate"
@@ -28,6 +17,13 @@
                         ErrorMessage="* Wrong date formate" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic"
                         ValidationExpression="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"></asp:RegularExpressionValidator>
                     <span style="color: red"><%=dateToError %></span>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label>Contract# :</label>
+                    <asp:TextBox ID="txtContract" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtContract"
+                        ErrorMessage="* Please enter contract id" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
+                    </asp:RequiredFieldValidator>
                 </div>
                 <div class="form-group ml16">
                     <div>

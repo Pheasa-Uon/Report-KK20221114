@@ -370,6 +370,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnnum_of_day;
             
+            private global::System.Data.DataColumn columndesc_monitor;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public LateReportDSDataTable() {
@@ -629,6 +631,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn desc_monitorColumn {
+                get {
+                    return this.columndesc_monitor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -692,7 +702,8 @@ namespace Report.Dataset {
                         string ticket_no, 
                         string first_disburse_date, 
                         string interest_late, 
-                        string num_of_day) {
+                        string num_of_day, 
+                        string desc_monitor) {
                 LateReportDSRow rowLateReportDSRow = ((LateReportDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         customer_name,
@@ -722,7 +733,8 @@ namespace Report.Dataset {
                         ticket_no,
                         first_disburse_date,
                         interest_late,
-                        num_of_day};
+                        num_of_day,
+                        desc_monitor};
                 rowLateReportDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLateReportDSRow);
                 return rowLateReportDSRow;
@@ -773,6 +785,7 @@ namespace Report.Dataset {
                 this.columnfirst_disburse_date = base.Columns["first_disburse_date"];
                 this.columninterest_late = base.Columns["interest_late"];
                 this.columnnum_of_day = base.Columns["num_of_day"];
+                this.columndesc_monitor = base.Columns["desc_monitor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -834,6 +847,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columninterest_late);
                 this.columnnum_of_day = new global::System.Data.DataColumn("num_of_day", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnum_of_day);
+                this.columndesc_monitor = new global::System.Data.DataColumn("desc_monitor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndesc_monitor);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2062,6 +2077,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string desc_monitor {
+                get {
+                    try {
+                        return ((string)(this[this.tableLateReportDS.desc_monitorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'desc_monitor\' in table \'LateReportDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLateReportDS.desc_monitorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscustomer_nameNull() {
                 return this.IsNull(this.tableLateReportDS.customer_nameColumn);
             }
@@ -2394,6 +2425,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setnum_of_dayNull() {
                 this[this.tableLateReportDS.num_of_dayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isdesc_monitorNull() {
+                return this.IsNull(this.tableLateReportDS.desc_monitorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setdesc_monitorNull() {
+                this[this.tableLateReportDS.desc_monitorColumn] = global::System.Convert.DBNull;
             }
         }
         
