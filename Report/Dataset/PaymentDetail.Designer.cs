@@ -321,6 +321,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnpayment_method;
             
+            private global::System.Data.DataColumn columnticket_repayment;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PaymentDetailDSDataTable() {
@@ -524,6 +526,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ticket_repaymentColumn {
+                get {
+                    return this.columnticket_repayment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -580,7 +590,8 @@ namespace Report.Dataset {
                         string contract_status, 
                         string or_ref, 
                         string fee_collect, 
-                        string payment_method) {
+                        string payment_method, 
+                        string ticket_repayment) {
                 PaymentDetailDSRow rowPaymentDetailDSRow = ((PaymentDetailDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -603,7 +614,8 @@ namespace Report.Dataset {
                         contract_status,
                         or_ref,
                         fee_collect,
-                        payment_method};
+                        payment_method,
+                        ticket_repayment};
                 rowPaymentDetailDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPaymentDetailDSRow);
                 return rowPaymentDetailDSRow;
@@ -647,6 +659,7 @@ namespace Report.Dataset {
                 this.columnor_ref = base.Columns["or_ref"];
                 this.columnfee_collect = base.Columns["fee_collect"];
                 this.columnpayment_method = base.Columns["payment_method"];
+                this.columnticket_repayment = base.Columns["ticket_repayment"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -694,6 +707,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnfee_collect);
                 this.columnpayment_method = new global::System.Data.DataColumn("payment_method", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpayment_method);
+                this.columnticket_repayment = new global::System.Data.DataColumn("ticket_repayment", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnticket_repayment);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1172,6 +1187,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ticket_repayment {
+                get {
+                    try {
+                        return ((string)(this[this.tablePaymentDetailDS.ticket_repaymentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_repayment\' in table \'PaymentDetailDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePaymentDetailDS.ticket_repaymentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tablePaymentDetailDS.idColumn);
             }
@@ -1420,6 +1451,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setpayment_methodNull() {
                 this[this.tablePaymentDetailDS.payment_methodColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isticket_repaymentNull() {
+                return this.IsNull(this.tablePaymentDetailDS.ticket_repaymentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setticket_repaymentNull() {
+                this[this.tablePaymentDetailDS.ticket_repaymentColumn] = global::System.Convert.DBNull;
             }
         }
         

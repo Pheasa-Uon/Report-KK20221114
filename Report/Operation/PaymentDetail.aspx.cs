@@ -56,6 +56,7 @@ namespace Report.Operation
                 " CASE WHEN CON.contract_status = 6 THEN 'Redeem' " +
                 " WHEN CON.contract_status = 7 THEN 'In-Forfeit' " +
                 " WHEN CON.contract_status = 4 THEN 'Active' END AS contract_status, " +
+                " case when ST.ticket_status = 'P' then 'Paid' when ST.ticket_status = 'A' then 'Active' when ST.ticket_status = 'I' then 'Inactive' when ST.ticket_status = 'PPP' then 'Partial Prepaid' when ST.ticket_status = 'FPP' then 'Full Prepaid' else 'Partial Paid' end as ticket_repayment," +
                 " PT.or_ref, 0 AS fee_collect, PT.payment_method " +
                 " FROM payment PM " +
                 " LEFT JOIN payment_total PT ON PM.payment_total_id = PT.id " +
@@ -83,6 +84,7 @@ namespace Report.Operation
                 " CASE WHEN CON.contract_status = 6 THEN 'Redeem' " +
                 " WHEN CON.contract_status = 7 THEN 'In-Forfeit' " +
                 " WHEN CON.contract_status = 4 THEN 'Active' END AS contract_status, " +
+                " case when STT.ticket_status = 'P' then 'Paid' when STT.ticket_status = 'A' then 'Active' when STT.ticket_status = 'I' then 'Inactive' when STT.ticket_status = 'PPP' then 'Partial Prepaid' when STT.ticket_status = 'FPP' then 'Full Prepaid' else 'Partial Paid' end as ticket_repayment," +
                 " PT.or_ref, 0 AS fee_collect, PT.payment_method " +
                 " FROM payment PM " +
                 " LEFT JOIN payment_total PT ON PM.payment_total_id = PT.id " +
@@ -113,6 +115,7 @@ namespace Report.Operation
                       " CASE WHEN CON.contract_status = 6 THEN 'Redeem' " +
                       " WHEN CON.contract_status = 7 THEN 'In-Forfeit' " +
                       " WHEN CON.contract_status = 4 THEN 'Active' END AS contract_status, " +
+                      " '' as ticket_repayment," +
                       " CON.or_ref, (SELECT SUM(fee_collect) FROM contract_fee WHERE b_status = 1 AND contract_id = CON.id GROUP BY contract_id) AS fee_collect, 1 " +
                       " FROM contract CON " +
                       " LEFT JOIN product P ON CON.product_id = P.id " +
@@ -131,6 +134,7 @@ namespace Report.Operation
                          " CASE WHEN CON.contract_status = 6 THEN 'Redeem' " +
                          " WHEN CON.contract_status = 7 THEN 'In-Forfeit' " +
                          " WHEN CON.contract_status = 4 THEN 'Active' END AS contract_status, " +
+                         " '' as ticket_repayment," +
                          " CON.or_ref, (SELECT SUM(fee_collect) FROM contract_fee WHERE b_status = 1 AND contract_id = CON.id GROUP BY contract_id) AS fee_collect, 1 " +
                          " FROM contract CON " +
                          " LEFT JOIN product P ON CON.product_id = P.id " +
