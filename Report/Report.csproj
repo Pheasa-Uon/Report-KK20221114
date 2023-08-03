@@ -609,7 +609,6 @@
     <Content Include="Operation\CashCollectionOnDate.aspx" />
     <Content Include="Operation\ContractandCollateralDetailsofCustomer.aspx" />
     <Content Include="Operation\ContractExpectedRedeem.aspx" />
-    <Content Include="Operation\Customer.aspx" />
     <Content Include="Operation\ContractOutstandingByDate.aspx" />
     <Content Include="Operation\OneYearRenewal.aspx" />
     <Content Include="Operation\PawnListDetail.rdlc">
@@ -1402,13 +1401,6 @@
     <Compile Include="Operation\ContractExpectedRedeem.aspx.designer.cs">
       <DependentUpon>ContractExpectedRedeem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Operation\Customer.aspx.cs">
-      <DependentUpon>Customer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operation\Customer.aspx.designer.cs">
-      <DependentUpon>Customer.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Operation\CustomerList.aspx.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1641,11 +1633,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Accounting\FixedAssetListing.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Operation\Customer.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
