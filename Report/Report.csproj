@@ -438,6 +438,17 @@
     <Content Include="Dataset\ContractExpectedRedeem.xss">
       <DependentUpon>ContractExpectedRedeem.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\ContractLateRenewal.xsc">
+      <DependentUpon>ContractLateRenewal.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\ContractLateRenewal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractLateRenewal.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\ContractLateRenewal.xss">
+      <DependentUpon>ContractLateRenewal.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\ContractOutstandingByDate.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -445,6 +456,17 @@
     </None>
     <Content Include="Dataset\ContractOutstandingByDate.xss">
       <DependentUpon>ContractOutstandingByDate.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\ContractWillRenewalIn15Days.xsc">
+      <DependentUpon>ContractWillRenewalIn15Days.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\ContractWillRenewalIn15Days.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractWillRenewalIn15Days.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\ContractWillRenewalIn15Days.xss">
+      <DependentUpon>ContractWillRenewalIn15Days.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\COProductivity.xsd">
       <SubType>Designer</SubType>
@@ -609,7 +631,9 @@
     <Content Include="Operation\CashCollectionOnDate.aspx" />
     <Content Include="Operation\ContractandCollateralDetailsofCustomer.aspx" />
     <Content Include="Operation\ContractExpectedRedeem.aspx" />
+    <Content Include="Operation\ContractLateRenewal.aspx" />
     <Content Include="Operation\ContractOutstandingByDate.aspx" />
+    <Content Include="Operation\ContractWillRenewalIn15Days.aspx" />
     <Content Include="Operation\OneYearRenewal.aspx" />
     <Content Include="Operation\PawnListDetail.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1169,10 +1193,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ContractExpectedRedeem.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\ContractLateRenewal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractLateRenewal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\ContractOutstandingByDate.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContractOutstandingByDate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\ContractWillRenewalIn15Days.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractWillRenewalIn15Days.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\COProductivity.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1400,6 +1434,20 @@
     </Compile>
     <Compile Include="Operation\ContractExpectedRedeem.aspx.designer.cs">
       <DependentUpon>ContractExpectedRedeem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ContractLateRenewal.aspx.cs">
+      <DependentUpon>ContractLateRenewal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ContractLateRenewal.aspx.designer.cs">
+      <DependentUpon>ContractLateRenewal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ContractWillRenewalIn15Days.aspx.cs">
+      <DependentUpon>ContractWillRenewalIn15Days.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ContractWillRenewalIn15Days.aspx.designer.cs">
+      <DependentUpon>ContractWillRenewalIn15Days.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\CustomerList.aspx.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
@@ -1665,6 +1713,16 @@
     </Content>
     <Content Include="Operation\OneYearRenewal.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Operation\ContractLateRenewal.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Operation\ContractWillRenewalIn15Days.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <PropertyGroup>
