@@ -315,7 +315,7 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnfirst_disburse_date;
             
-            private global::System.Data.DataColumn columninterest_late;
+            private global::System.Data.DataColumn columninterest_less;
             
             private global::System.Data.DataColumn columnnum_of_day;
             
@@ -328,6 +328,8 @@ namespace Report.Dataset {
             private global::System.Data.DataColumn columnoutstanding;
             
             private global::System.Data.DataColumn columntotal_balance;
+            
+            private global::System.Data.DataColumn columninterest_accrual;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -508,9 +510,9 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn interest_lateColumn {
+            public global::System.Data.DataColumn interest_lessColumn {
                 get {
-                    return this.columninterest_late;
+                    return this.columninterest_less;
                 }
             }
             
@@ -559,6 +561,14 @@ namespace Report.Dataset {
             public global::System.Data.DataColumn total_balanceColumn {
                 get {
                     return this.columntotal_balance;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interest_accrualColumn {
+                get {
+                    return this.columninterest_accrual;
                 }
             }
             
@@ -618,13 +628,14 @@ namespace Report.Dataset {
                         string contract_status, 
                         string ticket_no, 
                         string first_disburse_date, 
-                        string interest_late, 
+                        string interest_less, 
                         string num_of_day, 
                         string desc_monitor, 
                         string pawn_officer_name, 
                         string expired_date, 
                         string outstanding, 
-                        string total_balance) {
+                        string total_balance, 
+                        string interest_accrual) {
                 ContractWillRenewalIn15DaysDSRow rowContractWillRenewalIn15DaysDSRow = ((ContractWillRenewalIn15DaysDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         customer_name,
@@ -645,13 +656,14 @@ namespace Report.Dataset {
                         contract_status,
                         ticket_no,
                         first_disburse_date,
-                        interest_late,
+                        interest_less,
                         num_of_day,
                         desc_monitor,
                         pawn_officer_name,
                         expired_date,
                         outstanding,
-                        total_balance};
+                        total_balance,
+                        interest_accrual};
                 rowContractWillRenewalIn15DaysDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowContractWillRenewalIn15DaysDSRow);
                 return rowContractWillRenewalIn15DaysDSRow;
@@ -692,13 +704,14 @@ namespace Report.Dataset {
                 this.columncontract_status = base.Columns["contract_status"];
                 this.columnticket_no = base.Columns["ticket_no"];
                 this.columnfirst_disburse_date = base.Columns["first_disburse_date"];
-                this.columninterest_late = base.Columns["interest_late"];
+                this.columninterest_less = base.Columns["interest_less"];
                 this.columnnum_of_day = base.Columns["num_of_day"];
                 this.columndesc_monitor = base.Columns["desc_monitor"];
                 this.columnpawn_officer_name = base.Columns["pawn_officer_name"];
                 this.columnexpired_date = base.Columns["expired_date"];
                 this.columnoutstanding = base.Columns["outstanding"];
                 this.columntotal_balance = base.Columns["total_balance"];
+                this.columninterest_accrual = base.Columns["interest_accrual"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -740,8 +753,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnticket_no);
                 this.columnfirst_disburse_date = new global::System.Data.DataColumn("first_disburse_date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfirst_disburse_date);
-                this.columninterest_late = new global::System.Data.DataColumn("interest_late", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columninterest_late);
+                this.columninterest_less = new global::System.Data.DataColumn("interest_less", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest_less);
                 this.columnnum_of_day = new global::System.Data.DataColumn("num_of_day", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnum_of_day);
                 this.columndesc_monitor = new global::System.Data.DataColumn("desc_monitor", typeof(string), null, global::System.Data.MappingType.Element);
@@ -754,6 +767,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnoutstanding);
                 this.columntotal_balance = new global::System.Data.DataColumn("total_balance", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntotal_balance);
+                this.columninterest_accrual = new global::System.Data.DataColumn("interest_accrual", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest_accrual);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1201,18 +1216,18 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string interest_late {
+            public string interest_less {
                 get {
                     try {
-                        return ((string)(this[this.tableContractWillRenewalIn15DaysDS.interest_lateColumn]));
+                        return ((string)(this[this.tableContractWillRenewalIn15DaysDS.interest_lessColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest_late\' in table \'ContractWillRenewalIn15DaysDS\' is " +
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_less\' in table \'ContractWillRenewalIn15DaysDS\' is " +
                                 "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableContractWillRenewalIn15DaysDS.interest_lateColumn] = value;
+                    this[this.tableContractWillRenewalIn15DaysDS.interest_lessColumn] = value;
                 }
             }
             
@@ -1315,6 +1330,23 @@ namespace Report.Dataset {
                 }
                 set {
                     this[this.tableContractWillRenewalIn15DaysDS.total_balanceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string interest_accrual {
+                get {
+                    try {
+                        return ((string)(this[this.tableContractWillRenewalIn15DaysDS.interest_accrualColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_accrual\' in table \'ContractWillRenewalIn15DaysDS\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableContractWillRenewalIn15DaysDS.interest_accrualColumn] = value;
                 }
             }
             
@@ -1536,14 +1568,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isinterest_lateNull() {
-                return this.IsNull(this.tableContractWillRenewalIn15DaysDS.interest_lateColumn);
+            public bool Isinterest_lessNull() {
+                return this.IsNull(this.tableContractWillRenewalIn15DaysDS.interest_lessColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setinterest_lateNull() {
-                this[this.tableContractWillRenewalIn15DaysDS.interest_lateColumn] = global::System.Convert.DBNull;
+            public void Setinterest_lessNull() {
+                this[this.tableContractWillRenewalIn15DaysDS.interest_lessColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1616,6 +1648,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Settotal_balanceNull() {
                 this[this.tableContractWillRenewalIn15DaysDS.total_balanceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinterest_accrualNull() {
+                return this.IsNull(this.tableContractWillRenewalIn15DaysDS.interest_accrualColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinterest_accrualNull() {
+                this[this.tableContractWillRenewalIn15DaysDS.interest_accrualColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ContractLateRenewal">
+    <DataSource Name="ContractWillRenewalInMonth">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>db72e836-c5f8-44f7-aa24-54838d9d4c1f</rd:DataSourceID>
+      <rd:DataSourceID>8e659b9c-2d27-4b28-9f5e-8b59278ec106</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ContractLateRenewalDS">
+    <DataSet Name="ContractWillRenewalInMonthDS">
       <Query>
-        <DataSourceName>ContractLateRenewal</DataSourceName>
+        <DataSourceName>ContractWillRenewalInMonth</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -123,9 +123,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ContractLateRenewal</rd:DataSetName>
-        <rd:SchemaPath>D:\002-MIDAS Financial System\010-Reports\001-KK Power Report\003-KK Power report_2023020701\Report\Dataset\ContractLateRenewal.xsd</rd:SchemaPath>
-        <rd:TableName>ContractLateRenewalDS</rd:TableName>
+        <rd:DataSetName>ContractWillRenewalInMonth</rd:DataSetName>
+        <rd:SchemaPath>D:\002-MIDAS Financial System\010-Reports\001-KK Power Report\003-KK Power report_2023020701\Report\Dataset\ContractWillRenewalInMonth.xsd</rd:SchemaPath>
+        <rd:TableName>ContractWillRenewalInMonthDS</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -156,6 +156,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CompanyName</rd:DefaultName>
+            <Top>0.01833in</Top>
             <Height>0.25in</Height>
             <Width>5.59167in</Width>
             <Style>
@@ -176,7 +177,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Contract Late Renewal</Value>
+                    <Value>Contract Will Renewal In Month</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -189,7 +190,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.27778in</Top>
+            <Top>0.29611in</Top>
             <Height>0.25in</Height>
             <Width>5.59167in</Width>
             <ZIndex>1</ZIndex>
@@ -223,7 +224,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.56944in</Top>
+            <Top>0.58777in</Top>
             <Height>0.25in</Height>
             <Width>1.03333in</Width>
             <ZIndex>2</ZIndex>
@@ -257,7 +258,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Branch</rd:DefaultName>
-            <Top>0.56944in</Top>
+            <Top>0.58777in</Top>
             <Left>1.03333in</Left>
             <Height>0.25in</Height>
             <Width>2.83333in</Width>
@@ -959,7 +960,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=RowNumber("ContractLateRenewalDS")</Value>
+                                  <Value>=RowNumber("ContractWillRenewalInMonthDS")</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                   </Style>
@@ -1387,7 +1388,8 @@
                                   <Value>=Fields!interest_accrual.Value</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
-                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                    <Format>'$'#,0.00;('$'#,0.00);'-'</Format>
+                                    <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1935,8 +1937,8 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>ContractLateRenewalDS</DataSetName>
-            <Top>1.01333in</Top>
+            <DataSetName>ContractWillRenewalInMonthDS</DataSetName>
+            <Top>1.03166in</Top>
             <Height>0.75in</Height>
             <Width>21.76666in</Width>
             <ZIndex>4</ZIndex>
@@ -1947,7 +1949,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>3.51667in</Height>
+        <Height>2in</Height>
         <Style />
       </Body>
       <Width>21.76666in</Width>
@@ -1993,5 +1995,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>616188f3-5de7-4c70-b08b-c0f1d4c491d3</rd:ReportID>
+  <rd:ReportID>74815cfa-3332-4d69-8d03-946582bcf3ae</rd:ReportID>
 </Report>
