@@ -87,7 +87,7 @@ namespace Report.Accounting
                 " LEFT JOIN customer cus ON con.customer_id = cus.id " +
                 " LEFT JOIN `user` usr ON jou.created_by_id = usr.id " +
                 " LEFT JOIN system_date sd ON act.system_date_id = sd.id " +
-                " WHERE DATE(act.sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND jou.trnx_status = 1 AND act.trx_status IN(1, 2) " +
+                " WHERE DATE(act.sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND jou.trnx_status = 1 AND act.trx_status IN(1, 2) AND act.b_status = 1 " +
                 " AND act.gl_code = '" + txtGLCode.Text.Trim() + "' ORDER BY entry_no; ";
             }
             else
@@ -112,7 +112,7 @@ namespace Report.Accounting
                 " LEFT JOIN customer cus ON con.customer_id = cus.id " +
                 " LEFT JOIN `user` usr ON jou.created_by_id = usr.id " +
                 " LEFT JOIN system_date sd ON act.system_date_id = sd.id " +
-                " WHERE DATE(act.sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND jou.trnx_status = 1 AND act.branch_id = " + ddBranchName.SelectedItem.Value + " AND act.trx_status IN(1, 2) " +
+                " WHERE DATE(act.sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND jou.trnx_status = 1 AND act.branch_id = " + ddBranchName.SelectedItem.Value + " AND act.trx_status IN(1, 2) AND act.b_status = 1 " +
                 " AND act.gl_code = '" + txtGLCode.Text.Trim() + "' ORDER BY entry_no; ";
             }
 

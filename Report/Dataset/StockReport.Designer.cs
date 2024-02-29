@@ -341,8 +341,6 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnoutstanding;
             
-            private global::System.Data.DataColumn columnstatus;
-            
             private global::System.Data.DataColumn columnpawn_officer;
             
             private global::System.Data.DataColumn columnlob_name;
@@ -370,6 +368,10 @@ namespace Report.Dataset {
             private global::System.Data.DataColumn columncertificate_check;
             
             private global::System.Data.DataColumn columndisbursement_date;
+            
+            private global::System.Data.DataColumn columnexpired_date;
+            
+            private global::System.Data.DataColumn columnstatus;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -654,14 +656,6 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn statusColumn {
-                get {
-                    return this.columnstatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn pawn_officerColumn {
                 get {
                     return this.columnpawn_officer;
@@ -774,6 +768,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn expired_dateColumn {
+                get {
+                    return this.columnexpired_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn statusColumn {
+                get {
+                    return this.columnstatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -841,7 +851,6 @@ namespace Report.Dataset {
                         string el_model, 
                         string interest_rate, 
                         string outstanding, 
-                        string status, 
                         string pawn_officer, 
                         string lob_name, 
                         string pre_ticket_no, 
@@ -855,7 +864,9 @@ namespace Report.Dataset {
                         string vh_first_issue_date, 
                         string is_ownership, 
                         string certificate_check, 
-                        string disbursement_date) {
+                        string disbursement_date, 
+                        string expired_date, 
+                        string status) {
                 StockDSRow rowStockDSRow = ((StockDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -889,7 +900,6 @@ namespace Report.Dataset {
                         el_model,
                         interest_rate,
                         outstanding,
-                        status,
                         pawn_officer,
                         lob_name,
                         pre_ticket_no,
@@ -903,7 +913,9 @@ namespace Report.Dataset {
                         vh_first_issue_date,
                         is_ownership,
                         certificate_check,
-                        disbursement_date};
+                        disbursement_date,
+                        expired_date,
+                        status};
                 rowStockDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStockDSRow);
                 return rowStockDSRow;
@@ -957,7 +969,6 @@ namespace Report.Dataset {
                 this.columnel_model = base.Columns["el_model"];
                 this.columninterest_rate = base.Columns["interest_rate"];
                 this.columnoutstanding = base.Columns["outstanding"];
-                this.columnstatus = base.Columns["status"];
                 this.columnpawn_officer = base.Columns["pawn_officer"];
                 this.columnlob_name = base.Columns["lob_name"];
                 this.columnpre_ticket_no = base.Columns["pre_ticket_no"];
@@ -972,6 +983,8 @@ namespace Report.Dataset {
                 this.columnis_ownership = base.Columns["is_ownership"];
                 this.columncertificate_check = base.Columns["certificate_check"];
                 this.columndisbursement_date = base.Columns["disbursement_date"];
+                this.columnexpired_date = base.Columns["expired_date"];
+                this.columnstatus = base.Columns["status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1039,8 +1052,6 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columninterest_rate);
                 this.columnoutstanding = new global::System.Data.DataColumn("outstanding", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnoutstanding);
-                this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstatus);
                 this.columnpawn_officer = new global::System.Data.DataColumn("pawn_officer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpawn_officer);
                 this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1069,6 +1080,10 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columncertificate_check);
                 this.columndisbursement_date = new global::System.Data.DataColumn("disbursement_date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndisbursement_date);
+                this.columnexpired_date = new global::System.Data.DataColumn("expired_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexpired_date);
+                this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1707,22 +1722,6 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string status {
-                get {
-                    try {
-                        return ((string)(this[this.tableStockDS.statusColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'status\' in table \'StockDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableStockDS.statusColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string pawn_officer {
                 get {
                     try {
@@ -1942,6 +1941,38 @@ namespace Report.Dataset {
                 }
                 set {
                     this[this.tableStockDS.disbursement_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string expired_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.expired_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'expired_date\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.expired_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string status {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'status\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.statusColumn] = value;
                 }
             }
             
@@ -2319,18 +2350,6 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsstatusNull() {
-                return this.IsNull(this.tableStockDS.statusColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetstatusNull() {
-                this[this.tableStockDS.statusColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Ispawn_officerNull() {
                 return this.IsNull(this.tableStockDS.pawn_officerColumn);
             }
@@ -2495,6 +2514,30 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setdisbursement_dateNull() {
                 this[this.tableStockDS.disbursement_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isexpired_dateNull() {
+                return this.IsNull(this.tableStockDS.expired_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setexpired_dateNull() {
+                this[this.tableStockDS.expired_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsstatusNull() {
+                return this.IsNull(this.tableStockDS.statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetstatusNull() {
+                this[this.tableStockDS.statusColumn] = global::System.Convert.DBNull;
             }
         }
         
