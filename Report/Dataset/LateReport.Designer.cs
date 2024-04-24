@@ -374,6 +374,10 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnname;
             
+            private global::System.Data.DataColumn columnmonitor_date;
+            
+            private global::System.Data.DataColumn columnstatus_monitor;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public LateReportDSDataTable() {
@@ -649,6 +653,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn monitor_dateColumn {
+                get {
+                    return this.columnmonitor_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn status_monitorColumn {
+                get {
+                    return this.columnstatus_monitor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -714,7 +734,9 @@ namespace Report.Dataset {
                         string interest_late, 
                         string num_of_day, 
                         string desc_monitor, 
-                        string name) {
+                        string name, 
+                        string monitor_date, 
+                        string status_monitor) {
                 LateReportDSRow rowLateReportDSRow = ((LateReportDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         customer_name,
@@ -746,7 +768,9 @@ namespace Report.Dataset {
                         interest_late,
                         num_of_day,
                         desc_monitor,
-                        name};
+                        name,
+                        monitor_date,
+                        status_monitor};
                 rowLateReportDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLateReportDSRow);
                 return rowLateReportDSRow;
@@ -799,6 +823,8 @@ namespace Report.Dataset {
                 this.columnnum_of_day = base.Columns["num_of_day"];
                 this.columndesc_monitor = base.Columns["desc_monitor"];
                 this.columnname = base.Columns["name"];
+                this.columnmonitor_date = base.Columns["monitor_date"];
+                this.columnstatus_monitor = base.Columns["status_monitor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -864,6 +890,10 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columndesc_monitor);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
+                this.columnmonitor_date = new global::System.Data.DataColumn("monitor_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmonitor_date);
+                this.columnstatus_monitor = new global::System.Data.DataColumn("status_monitor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus_monitor);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1050,6 +1080,8 @@ namespace Report.Dataset {
             private global::System.Data.DataColumn columncurrency;
             
             private global::System.Data.DataColumn columnpenalty_less;
+            
+            private global::System.Data.DataColumn columncurrency_code;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1302,6 +1334,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn currency_codeColumn {
+                get {
+                    return this.columncurrency_code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1364,7 +1404,8 @@ namespace Report.Dataset {
                         string principle6190, 
                         string principle91, 
                         string currency, 
-                        string penalty_less) {
+                        string penalty_less, 
+                        string currency_code) {
                 SummaryDSRow rowSummaryDSRow = ((SummaryDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         lob_name,
@@ -1393,7 +1434,8 @@ namespace Report.Dataset {
                         principle6190,
                         principle91,
                         currency,
-                        penalty_less};
+                        penalty_less,
+                        currency_code};
                 rowSummaryDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSummaryDSRow);
                 return rowSummaryDSRow;
@@ -1443,6 +1485,7 @@ namespace Report.Dataset {
                 this.columnprinciple91 = base.Columns["principle91"];
                 this.columncurrency = base.Columns["currency"];
                 this.columnpenalty_less = base.Columns["penalty_less"];
+                this.columncurrency_code = base.Columns["currency_code"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1502,6 +1545,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columncurrency);
                 this.columnpenalty_less = new global::System.Data.DataColumn("penalty_less", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpenalty_less);
+                this.columncurrency_code = new global::System.Data.DataColumn("currency_code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncurrency_code);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2124,6 +2169,38 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string monitor_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableLateReportDS.monitor_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'monitor_date\' in table \'LateReportDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLateReportDS.monitor_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string status_monitor {
+                get {
+                    try {
+                        return ((string)(this[this.tableLateReportDS.status_monitorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'status_monitor\' in table \'LateReportDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLateReportDS.status_monitorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscustomer_nameNull() {
                 return this.IsNull(this.tableLateReportDS.customer_nameColumn);
             }
@@ -2480,6 +2557,30 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetnameNull() {
                 this[this.tableLateReportDS.nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismonitor_dateNull() {
+                return this.IsNull(this.tableLateReportDS.monitor_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmonitor_dateNull() {
+                this[this.tableLateReportDS.monitor_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isstatus_monitorNull() {
+                return this.IsNull(this.tableLateReportDS.status_monitorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setstatus_monitorNull() {
+                this[this.tableLateReportDS.status_monitorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2931,6 +3032,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string currency_code {
+                get {
+                    try {
+                        return ((string)(this[this.tableSummaryDS.currency_codeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'currency_code\' in table \'SummaryDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSummaryDS.currency_codeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Islob_nameNull() {
                 return this.IsNull(this.tableSummaryDS.lob_nameColumn);
             }
@@ -3251,6 +3368,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setpenalty_lessNull() {
                 this[this.tableSummaryDS.penalty_lessColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Iscurrency_codeNull() {
+                return this.IsNull(this.tableSummaryDS.currency_codeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setcurrency_codeNull() {
+                this[this.tableSummaryDS.currency_codeColumn] = global::System.Convert.DBNull;
             }
         }
         
