@@ -43,8 +43,10 @@
               <xs:element name="first_disburse_date" msprop:Generator_ColumnPropNameInTable="first_disburse_dateColumn" msprop:Generator_ColumnPropNameInRow="first_disburse_date" msprop:Generator_UserColumnName="first_disburse_date" msprop:Generator_ColumnVarNameInTable="columnfirst_disburse_date" type="xs:string" minOccurs="0" />
               <xs:element name="interest_late" msprop:Generator_ColumnPropNameInTable="interest_lateColumn" msprop:Generator_ColumnPropNameInRow="interest_late" msprop:Generator_UserColumnName="interest_late" msprop:Generator_ColumnVarNameInTable="columninterest_late" type="xs:string" minOccurs="0" />
               <xs:element name="num_of_day" msprop:Generator_ColumnPropNameInTable="num_of_dayColumn" msprop:Generator_ColumnPropNameInRow="num_of_day" msprop:Generator_UserColumnName="num_of_day" msprop:Generator_ColumnVarNameInTable="columnnum_of_day" type="xs:string" minOccurs="0" />
-              <xs:element name="desc_monitor" msprop:Generator_UserColumnName="desc_monitor" msprop:Generator_ColumnPropNameInTable="desc_monitorColumn" msprop:Generator_ColumnPropNameInRow="desc_monitor" msprop:Generator_ColumnVarNameInTable="columndesc_monitor" type="xs:string" minOccurs="0" />
-              <xs:element name="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="desc_monitor" msprop:Generator_ColumnPropNameInTable="desc_monitorColumn" msprop:Generator_ColumnPropNameInRow="desc_monitor" msprop:Generator_UserColumnName="desc_monitor" msprop:Generator_ColumnVarNameInTable="columndesc_monitor" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" type="xs:string" minOccurs="0" />
+              <xs:element name="monitor_date" msprop:Generator_ColumnPropNameInRow="monitor_date" msprop:Generator_ColumnPropNameInTable="monitor_dateColumn" msprop:Generator_ColumnVarNameInTable="columnmonitor_date" msprop:Generator_UserColumnName="monitor_date" type="xs:string" minOccurs="0" />
+              <xs:element name="status_monitor" msprop:Generator_ColumnPropNameInRow="status_monitor" msprop:Generator_ColumnPropNameInTable="status_monitorColumn" msprop:Generator_ColumnVarNameInTable="columnstatus_monitor" msprop:Generator_UserColumnName="status_monitor" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -78,6 +80,7 @@
               <xs:element name="principle91" msprop:Generator_ColumnPropNameInTable="principle91Column" msprop:Generator_ColumnPropNameInRow="principle91" msprop:Generator_UserColumnName="principle91" msprop:Generator_ColumnVarNameInTable="columnprinciple91" type="xs:string" minOccurs="0" />
               <xs:element name="currency" msprop:Generator_ColumnPropNameInTable="currencyColumn" msprop:Generator_ColumnPropNameInRow="currency" msprop:Generator_UserColumnName="currency" msprop:Generator_ColumnVarNameInTable="columncurrency" type="xs:string" minOccurs="0" />
               <xs:element name="penalty_less" msprop:Generator_ColumnPropNameInTable="penalty_lessColumn" msprop:Generator_ColumnPropNameInRow="penalty_less" msprop:Generator_UserColumnName="penalty_less" msprop:Generator_ColumnVarNameInTable="columnpenalty_less" type="xs:string" minOccurs="0" />
+              <xs:element name="currency_code" msprop:Generator_ColumnPropNameInRow="currency_code" msprop:Generator_ColumnPropNameInTable="currency_codeColumn" msprop:Generator_ColumnVarNameInTable="columncurrency_code" msprop:Generator_UserColumnName="currency_code" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
