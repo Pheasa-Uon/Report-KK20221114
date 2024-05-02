@@ -72,7 +72,7 @@ namespace Report.Utils
         {
             var user = new User();
             var db = new DBConnect();
-            var sql = "SELECT U.id, ST.name, U.username, U.email, U.image_path, is_super_admin FROM USER U LEFT JOIN staff_info ST ON U.`staff_id`=ST.id WHERE U.b_status=True AND U.username='" + username + "' AND U.password='" + password + "';";
+            var sql = "SELECT U.id, ST.name, U.username, U.email, U.image_path, is_super_admin FROM user U LEFT JOIN staff_info ST ON U.`staff_id`=ST.id WHERE U.b_status=True AND U.username='" + username + "' AND U.password='" + password + "';";
             var dt = db.getDataTable(sql);
             if (dt.Rows.Count > 0)
             {
@@ -93,7 +93,7 @@ namespace Report.Utils
         {
             var user = new User();
             var db = new DBConnect();
-            var sql = "SELECT U.id, ST.name, U.username, U.email, U.image_path, is_super_admin FROM USER U LEFT JOIN staff_info ST ON U.`staff_id`=ST.id WHERE U.b_status=True AND U.login_token='" + token + "';";
+            var sql = "SELECT U.id, ST.name, U.username, U.email, U.image_path, is_super_admin FROM user U LEFT JOIN staff_info ST ON U.`staff_id`=ST.id WHERE U.b_status=True AND U.login_token='" + token + "';";
             var dt = db.getDataTable(sql);
             if (dt.Rows.Count > 0)
             {
