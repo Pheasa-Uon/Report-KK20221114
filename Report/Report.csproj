@@ -199,6 +199,7 @@
     <Content Include="Images\profile.png" />
     <Content Include="Images\ui-icons_444444_256x240.png" />
     <Content Include="Operation\AllContractList.aspx" />
+    <Content Include="Operation\ArrearReport.aspx" />
     <Content Include="Operation\BranchProductivity.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -298,6 +299,17 @@
     </None>
     <Content Include="Dataset\AccrualInterest.xss">
       <DependentUpon>AccrualInterest.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\ArrearReport.xsc">
+      <DependentUpon>ArrearReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\ArrearReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ArrearReport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\ArrearReport.xss">
+      <DependentUpon>ArrearReport.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\BranchProductivity.xsd">
       <SubType>Designer</SubType>
@@ -1144,6 +1156,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AllContractList.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\ArrearReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArrearReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\BranchProductivityAsOf.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1390,6 +1407,13 @@
     </Compile>
     <Compile Include="Operation\AllContractList.aspx.designer.cs">
       <DependentUpon>AllContractList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ArrearReport.aspx.cs">
+      <DependentUpon>ArrearReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ArrearReport.aspx.designer.cs">
+      <DependentUpon>ArrearReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\BranchProductivity.aspx.cs">
       <DependentUpon>BranchProductivity.aspx</DependentUpon>
@@ -1753,6 +1777,9 @@
     <Content Include="Operation\ContractWillRenewalInMonth.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Operation\ArrearReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
