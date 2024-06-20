@@ -337,6 +337,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columndesc_monitor;
             
+            private global::System.Data.DataColumn columnemp_no;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ArrearReportDTDataTable() {
@@ -604,6 +606,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn emp_noColumn {
+                get {
+                    return this.columnemp_no;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -668,7 +678,8 @@ namespace Report.Dataset {
                         string home_street, 
                         string monitor_date, 
                         string status_monitor, 
-                        string desc_monitor) {
+                        string desc_monitor, 
+                        string emp_no) {
                 ArrearReportDTRow rowArrearReportDTRow = ((ArrearReportDTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         appr,
@@ -699,7 +710,8 @@ namespace Report.Dataset {
                         home_street,
                         monitor_date,
                         status_monitor,
-                        desc_monitor};
+                        desc_monitor,
+                        emp_no};
                 rowArrearReportDTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowArrearReportDTRow);
                 return rowArrearReportDTRow;
@@ -751,6 +763,7 @@ namespace Report.Dataset {
                 this.columnmonitor_date = base.Columns["monitor_date"];
                 this.columnstatus_monitor = base.Columns["status_monitor"];
                 this.columndesc_monitor = base.Columns["desc_monitor"];
+                this.columnemp_no = base.Columns["emp_no"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -814,6 +827,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnstatus_monitor);
                 this.columndesc_monitor = new global::System.Data.DataColumn("desc_monitor", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndesc_monitor);
+                this.columnemp_no = new global::System.Data.DataColumn("emp_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnemp_no);
                 this.columndisbursement_date.Caption = "disbursment_date";
             }
             
@@ -1421,6 +1436,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string emp_no {
+                get {
+                    try {
+                        return ((string)(this[this.tableArrearReportDT.emp_noColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'emp_no\' in table \'ArrearReportDT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArrearReportDT.emp_noColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsapprNull() {
                 return this.IsNull(this.tableArrearReportDT.apprColumn);
             }
@@ -1765,6 +1796,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setdesc_monitorNull() {
                 this[this.tableArrearReportDT.desc_monitorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isemp_noNull() {
+                return this.IsNull(this.tableArrearReportDT.emp_noColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setemp_noNull() {
+                this[this.tableArrearReportDT.emp_noColumn] = global::System.Convert.DBNull;
             }
         }
         
